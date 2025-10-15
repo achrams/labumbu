@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Figtree";
+  src: url("../assets/font/Figtree-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BetterSeason";
+  src: url("../assets/font/Better-Season.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kaisei";
+  src: url("../assets/font/KaiseiTokumin-Regular.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.nav-font {
+  font-family: "Figtree", sans-serif;
+}
+
+.title-font {
+  font-family: "BetterSeason", sans-serif;
+}
