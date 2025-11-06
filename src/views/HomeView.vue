@@ -14,15 +14,15 @@ import amed from '../assets/artisan/JAR_AMED.png'
 import kusamba from '../assets/artisan/JAR_KUSAMBA.png'
 import kuwu from '../assets/artisan/JAR_KUWU_I.png'
 import tejakula from '../assets/artisan/JAR_TEJAKULA_I.png'
-import soon from '../assets/artisan/JAR_SOON.png'
+// import soon from '../assets/artisan/JAR_SOON.png'
+import krayan from '../assets/artisan/JAR_KRAYAN.png'
+import nipah from '../assets/artisan/JAR_NIPAH.png'
 
 import bawangputih from '../assets/spices/bawang-putih.png'
 import latam from '../assets/spices/lada-hitam.png'
-import hima from '../assets/spices/garam-himalaya.png'
 import cabe from '../assets/spices/cabe-bubuk.png'
 import tumbar from '../assets/spices/ketumbar.png'
 import laput from '../assets/spices/lada-putih.png'
-import chia from '../assets/spices/chia.png'
 import kunyit from '../assets/spices/kunyit.png'
 
 const images = [
@@ -30,17 +30,16 @@ const images = [
   { url: kusamba, title: 'Garam Kusamba' },
   { url: kuwu, title: 'Garam Bledug Kuwu' },
   { url: tejakula, title: 'Garam Tejakula' },
-  { url: soon, title: 'Segera Hadir' },
+  { url: krayan, title: 'Garam Krayan' },
+  { url: nipah, title: 'Garam Nipah' }
 ]
 
 const spiceImages = [
   { url: bawangputih, title: 'Bawang Putih' },
   { url: latam, title: 'Lada Hitam Bubuk' },
-  { url: hima, title: 'Garam Himalaya' },
   { url: cabe, title: 'Cabai Bubuk' },
   { url: tumbar, title: 'Ketumbar Bubuk' },
   { url: laput, title: 'Lada Putih Bubuk' },
-  { url: chia, title: 'Biji Chia' },
   { url: kunyit, title: 'Kunyit Bubuk' },
 ]
 
@@ -73,7 +72,7 @@ const opt = {
 
 const opt2 = {
   rewind: true,
-  perPage: 8,
+  perPage: 6,
   pagination: false,
   breakpoints: {
     800: {
@@ -235,7 +234,7 @@ onUnmounted(() => {
                 <img class="w-full" src="../assets/icon/rectangle_item.png" alt="rect_item_2">
               </div>
             </div>
-            <Splide :options="opt2" aria-label="Artisan Salts">
+            <Splide :options="opt2" aria-label="Labumbu Spices">
               <SplideSlide v-for="img in spiceImages" :key="img.title">
                 <div class="w-full flex flex-col items-center">
                   <img :src="img.url" :alt="img.title">

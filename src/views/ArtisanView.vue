@@ -40,8 +40,8 @@
               Garam
               Tejakula</div>
             <div class="w-full flex flex-col md:flex-row">
-              <img class="absolute z-0 w-full h-[30rem] object-cover left-0 hidden md:block -mt-10"
-                src="../assets/artisan/beach 2.png" alt="pantai">
+              <!-- <img class="absolute z-0 w-full h-[30rem] object-cover left-0 hidden md:block -mt-10"
+                src="../assets/artisan/beach 2.png" alt="pantai"> -->
               <div class="w-full md:w-1/3">
                 <div class="lg:p-16 relative flex items-end justify-end">
                   <img class="absolute z-0 w-full md:hidden" src="../assets/artisan/beach 2.png" alt="pantai">
@@ -67,8 +67,8 @@
               Garam
               Kusamba</div>
             <div class="w-full flex flex-col md:flex-row relative h-fit">
-              <img class="absolute z-0 w-3/5 right-0 hidden md:block -mt-20" src="../assets/artisan/nelayan.png"
-                alt="pantai">
+              <!-- <img class="absolute z-0 w-3/5 right-0 hidden md:block -mt-20" src="../assets/artisan/nelayan.png"
+                alt="pantai"> -->
               <div class="w-full md:w-1/3 relative z-40 md:order-2 order-1">
                 <div class="lg:p-16 relative flex items-end justify-start">
                   <img class="absolute z-0 w-full md:hidden" src="../assets/artisan/nelayan.png" alt="pantai">
@@ -94,9 +94,9 @@
               Garam
               Amed</div>
             <div class="w-full flex flex-col md:flex-row">
-              <img
+              <!-- <img
                 class="absolute z-0 w-full h-[30rem] object-cover left-0 hidden md:block -mt-10 transform scale-x-[-1]"
-                src="../assets/artisan/petani1.png" alt="petani1">
+                src="../assets/artisan/petani1.png" alt="petani1"> -->
               <div class="w-full md:w-1/3">
                 <div class="lg:p-16 relative flex items-end justify-end">
                   <img class="absolute z-0 w-full md:hidden" src="../assets/artisan/petani1.png" alt="petani1">
@@ -122,8 +122,8 @@
               Garam
               Bledug Kuwu</div>
             <div class="w-full flex flex-col md:flex-row relative h-fit">
-              <img class="absolute z-0 w-auto h-[35rem] right-0 hidden md:block -mt-20"
-                src="../assets/artisan/bleduk.png" alt="bleduk1">
+              <!-- <img class="absolute z-0 w-auto h-[35rem] right-0 hidden md:block -mt-20"
+                src="../assets/artisan/bleduk.png" alt="bleduk1"> -->
               <div class="w-full md:w-1/3 relative z-40 md:order-2 order-1">
                 <div class="lg:p-16 relative flex items-end justify-start">
                   <img class="absolute z-0 w-full md:hidden" src="../assets/artisan/bleduk.png" alt="bleduk2">
