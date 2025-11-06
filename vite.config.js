@@ -17,5 +17,4 @@ export default defineConfig({
     port: 40003,
     open: true,
   },
-  base: "/labumbu/",
 });
