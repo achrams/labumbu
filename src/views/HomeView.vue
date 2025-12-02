@@ -4,6 +4,7 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import Footer from '../components/Footer.vue'
 import { useRouter } from 'vue-router';
 import { useDataStore } from '@/stores';
+import ExploreMap from '@/components/ExploreMap.vue';
 
 const store = useDataStore()
 const router = useRouter()
@@ -124,6 +125,7 @@ onUnmounted(() => {
 
 <template>
   <div class="w-full h-full flex flex-col items-center justify-center bg-[#F2DAC0]">
+    <!-- <ExploreMap /> -->
     <div class="w-full h-full relative">
       <div class="w-full h-fit ">
         <div class="absolute h-full w-full flex flex-col justify-end lg:items-center">
@@ -257,27 +259,12 @@ onUnmounted(() => {
           </h6>
         </div> -->
         <!-- <div class="text-center text-4xl lg:text-8xl font-[Kaisei] mt-16 lg:mt-24">Jelajahi Cerita</div> -->
-        <!-- <div class="mt-12 lg:h-[600px] w-full relative">
-          <img class="w-full h-auto bg-cover" src="../assets/bg/peta.png" alt="peta-artisan">
+        <!-- <div class="mt-12 lg:h-auto w-full relative">
           <div
-            class="w-6 h-18 absolute md:-mt-[11vh] md:ml-[30vw] lg:-mt-[14vh] lg:ml-[30vw] xl:ml-[32rem] xl:-mt-[15rem] cursor-pointer flex flex-col items-center">
-            <div class="w-6 h-6 rounded-full bg-red-400"></div>
-            <div class="w-0.5 h-11 bg-red-400"></div>
-          </div>
-          <div
-            class="w-6 h-18 absolute top-10 md:mt-[1vh] md:ml-[42vw] lg:mt-[2vh] lg:ml-[45vw] xl:mt-[8rem] xl:ml-[43rem] cursor-pointer flex flex-col items-center">
-            <div class="w-6 h-6 rounded-full bg-red-400"></div>
-            <div class="w-0.5 h-11 bg-red-400"></div>
-          </div>
-          <div
-            class="w-6 h-18 absolute md:ml-[40vw] md:-mt-[10vh] lg:ml-[41vw] lg:-mt-[12vh] xl:ml-[42rem] xl:-mt-[13rem] cursor-pointer flex flex-col items-center">
-            <div class="w-6 h-6 rounded-full bg-red-400"></div>
-            <div class="w-0.5 h-11 bg-red-400"></div>
-          </div>
-          <div
-            class="w-6 h-18 absolute right-0 md:mr-[7vw] md:-mt-[15vh] lg:mr-[7vw] lg:-mt-[20vh] xl:mr-[7vw] xl:-mt-[20rem] cursor-pointer flex flex-col items-center">
-            <div class="w-6 h-6 rounded-full bg-red-400"></div>
-            <div class="w-0.5 h-11 bg-red-400"></div>
+            class="w-full h-[500px] bg-black/50 cursor-pointer relative flex flex-col items-center justify-center text-3xl hover:text-5xl duration-100 delay-75">
+            <h5 class="text-center font-[FigTree] rounded shadow-md text-[#F2DAC0] z-50 px-4 py-2 bg-[#AA2123]">Explore
+            </h5>
+            <img class="w-full h-[500px] absolute" src="../assets/bg/peta.png" alt="peta-artisan">
           </div>
         </div> -->
       </div>

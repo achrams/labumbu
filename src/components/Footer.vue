@@ -58,7 +58,7 @@
     </div>
 
     <div class="text-center md:text-left text-black text-xs">
-      <p>© 2023 Labumbu. All rights reserved.</p>
+      <p>© 2025 Labumbu. All rights reserved.</p>
     </div>
     <div class="w-full flex justify-center md:justify-end gap-3 text-black text-xs">
       <h6>Privacy Policy</h6>
