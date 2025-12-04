@@ -14,13 +14,13 @@
               :class="{ 'underline underline-offset-4 decoration-3 decoration-[#C54827]': currentPath === '/' }">
               Brand Kami
             </RouterLink>
-            <RouterLink to="/artisan"
+            <RouterLink to="/artisan" v-if="currentPath !== '/artisan'"
               class="px-2 py-1 hover:scale-105 text-sm lg:text-xl font-semibold focus:outline-none focus:ring-0"
               @click="setPath('/artisan')"
               :class="{ 'underline underline-offset-4 decoration-3 decoration-[#C54827]': currentPath === '/artisan' }">
               Artisan Salt
             </RouterLink>
-            <RouterLink to="/hampers"
+            <RouterLink to="/hampers" v-if="currentPath !== '/hampers'"
               class="px-2 py-1 hover:scale-105 text-sm lg:text-xl font-semibold focus:outline-none focus:ring-0"
               @click="setPath('/hampers')"
               :class="{ 'underline underline-offset-4 decoration-3 decoration-[#C54827]': currentPath === '/hampers' }">
