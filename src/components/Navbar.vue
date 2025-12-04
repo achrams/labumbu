@@ -20,6 +20,12 @@
               :class="{ 'underline underline-offset-4 decoration-3 decoration-[#C54827]': currentPath === '/artisan' }">
               Artisan Salt
             </RouterLink>
+            <RouterLink to="/hampers"
+              class="px-2 py-1 hover:scale-105 text-sm lg:text-xl font-semibold focus:outline-none focus:ring-0"
+              @click="setPath('/hampers')"
+              :class="{ 'underline underline-offset-4 decoration-3 decoration-[#C54827]': currentPath === '/hampers' }">
+              Hampers
+            </RouterLink>
             <!-- <RouterLink to="/articles"
               class="px-2 py-1 hover:scale-105 text-sm lg:text-xl font-semibold focus:outline-none focus:ring-0"
               @click="setPath('/articles')"
