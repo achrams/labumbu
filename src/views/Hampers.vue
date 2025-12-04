@@ -29,7 +29,7 @@
             <h5 class="my-4">{{ toIDR(hampersList[selectedHamper].price) }}</h5>
             <button
               class="bg-[#AA2123] hover:bg-[#80181a] px-4 py-2 w-full font-[FigTree] text-[#F2DAC0] text-md cursor-pointer"
-              @click="orderItem(selectedHamper)">Beli Sekarang</button>
+              @click="orderItem(selectedHamper)">Pre Order Now</button>
           </div>
         </div>
       </div>
