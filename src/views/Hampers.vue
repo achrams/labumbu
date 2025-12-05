@@ -107,6 +107,12 @@
       <img class="w-full h-auto md:h-auto object-cover" src="../assets/hampers/Pattern.png" alt="pattern-1">
       <img class="w-full h-auto md:h-auto object-cover" src="../assets/hampers/Pattern2.png" alt="pattern-2">
       <img class="w-full h-auto md:h-auto object-cover" src="../assets/hampers/Pattern3.png" alt="pattern-3">
+      <img class="w-full h-auto md:h-auto object-cover" src="../assets/hampers/Pattern.png" alt="pattern-1">
+      <img class="w-full h-auto md:h-auto object-cover" src="../assets/hampers/Pattern2.png" alt="pattern-2">
+      <img class="w-full h-auto md:h-auto object-cover" src="../assets/hampers/Pattern3.png" alt="pattern-3">
+      <img class="w-full h-auto md:h-auto object-cover" src="../assets/hampers/Pattern.png" alt="pattern-1">
+      <img class="w-full h-auto md:h-auto object-cover" src="../assets/hampers/Pattern2.png" alt="pattern-2">
+      <img class="w-full h-auto md:h-auto object-cover" src="../assets/hampers/Pattern3.png" alt="pattern-3">
     </div>
     <div class="p-12 z-40">
       <!-- <Footer /> -->
