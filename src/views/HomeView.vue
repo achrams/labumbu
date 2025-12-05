@@ -198,7 +198,8 @@ onUnmounted(() => {
                   </div>
                 </SplideSlide>
               </Splide>
-              <div class="py-12 px-4 lg:px-32 text-white font-[FigTree] text-center text-xl">Nikmati cita rasa rempah
+              <div class="py-12 px-4 lg:px-32 text-white font-[FigTree] text-center text-md md:text-xl">Nikmati cita
+                rasa rempah
                 Indonesia
                 dengan
                 Labumbu!
@@ -247,9 +248,9 @@ onUnmounted(() => {
         </transition>
       </div>
       <div class="w-full px-8 font-[FigTree] relative">
-        <h5 class="text-center text-lg text-[#AA2123]">Nikmati cita rasa rempah Indonesia dengan Labumbu!
+        <h5 class="text-center text-md text-[#AA2123]">Nikmati cita rasa rempah Indonesia dengan Labumbu!
         </h5>
-        <h5 class="text-center text-lg">
+        <h5 class="text-center text-md">
           Terbuat dari 100% bahan alami, tanpa pengawet, tanpa pewarna, dan tanpa penyedap buatan. Cocok untuk
           pelengkap cerita masakanmu, praktis digunakan, dan dikemas higienis.
         </h5>
@@ -307,7 +308,7 @@ onUnmounted(() => {
 
 .slide-up-enter-active,
 .slide-up-leave-active {
-  transition: all 0.4s ease;
+  transition: all 1s ease;
 }
 
 .slide-up-enter-from {
@@ -322,7 +323,7 @@ onUnmounted(() => {
 
 .slide-left-enter-active,
 .slide-left-leave-active {
-  transition: all 0.4s ease;
+  transition: all 1s ease;
 }
 
 .slide-left-enter-from {
@@ -337,7 +338,7 @@ onUnmounted(() => {
 
 .slide-right-enter-active,
 .slide-right-leave-active {
-  transition: all 0.4s ease;
+  transition: all 1s ease;
 }
 
 .slide-right-enter-from {

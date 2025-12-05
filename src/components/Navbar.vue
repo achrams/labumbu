@@ -3,21 +3,19 @@
     <div class="w-full md:w-11/12 h-12 lg:h-20 rounded-2xl px-2 lg:px-6 duration-150 delay-75"
       :class="scrollY > 50000 ? 'bg-black/70' : 'bg-transparent'">
       <div class="flex w-full h-full items-center justify-between px-4">
-        <img v-if="currentPath === '/'" src="../assets/logo/labumbu-putih.png" alt="logo-labumbu"
-          class="w-20 lg:w-32 h-auto">
+        <img v-if="currentPath === '/' || currentPath == '/hampers'" src="../assets/logo/labumbu-putih.png"
+          alt="logo-labumbu" class="w-20 lg:w-32 h-auto">
         <img v-else src="../assets/logo/labumbu-orange.png" alt="logo-labumbu-orange" class="w-20 lg:w-32 h-auto">
         <div>
           <nav class="text-sm lg:text-base nav-font" :class="currentPath == '/' ? 'text-white' : 'text-black'">
             <RouterLink to="/" v-if="currentPath !== '/'"
               class="px-2 py-1 hover:scale-105 text-sm lg:text-xl font-semibold focus:outline-none focus:ring-0"
-              @click="setPath('/')"
-              :class="{ 'underline underline-offset-4 decoration-3 decoration-[#C54827]': currentPath === '/' }">
+              @click="setPath('/')" :class="{ 'text-white text-shadow-2xs': currentPath !== '/' }">
               Brand Kami
             </RouterLink>
             <RouterLink to="/artisan" v-if="currentPath !== '/artisan'"
               class="px-2 py-1 hover:scale-105 text-sm lg:text-xl font-semibold focus:outline-none focus:ring-0"
-              @click="setPath('/artisan')"
-              :class="{ 'underline underline-offset-4 decoration-3 decoration-[#C54827]': currentPath === '/artisan' }">
+              @click="setPath('/artisan')" :class="{ 'text-white text-shadow-2xs': currentPath !== '/artisan' }">
               Artisan Salt
             </RouterLink>
             <RouterLink to="/hampers" v-if="currentPath !== '/hampers'"

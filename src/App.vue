@@ -7,7 +7,7 @@ const route = useRoute()
 
 <template>
   <div class="w-full h-full bg-black">
-    <Navbar v-if="!route.path.includes('panel') && !route.path.includes('hampers')" />
+    <Navbar v-if="!route.path.includes('panel')" />
     <router-view></router-view>
   </div>
 </template>
