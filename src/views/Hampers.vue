@@ -238,7 +238,7 @@ const toIDR = (price) => {
 
 const priceCalc = (val) => {
   const today = new Date().getTime()
-  const early = new Date('2025-12-18T23:59:59').getTime()
+  const early = new Date('2025-12-22T23:59:59').getTime()
   if (today >= early) {
     return toIDR(val)
   }

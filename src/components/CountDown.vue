@@ -26,7 +26,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const targetDate = new Date('2025-12-18T23:59:59').getTime()
+const targetDate = new Date('2025-22-18T23:59:59').getTime()
 const timeLeft = ref(targetDate - Date.now())
 const showCountdown = ref(true)
 setInterval(() => {
