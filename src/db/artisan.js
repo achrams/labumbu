@@ -248,7 +248,7 @@ const artisan = [
     createdAt: new Date(),
   },
   {
-    id: 3,
+    id: 4,
     title: "Garam Bledug Kuwu",
     subtitle: "Mengenal Butiran Garam Dari Vulkanik Bumi",
     slug: "garam-bledug-kuwu",
@@ -453,4 +453,12 @@ const artisan = [
   },
 ];
 
-export default artisan;
+const artisanList = [
+  {
+    id: 4,
+    slug: "garam-bledug-kuwu",
+    title: "Garam Bledug Kuwu",
+    image: kuwu,
+  },
+];
+export default { artisan, artisanList };
