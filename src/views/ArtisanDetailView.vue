@@ -1,7 +1,6 @@
 <template>
   <div class="w-full min-h-screen h-full flex flex-col items-center bg-white relative font-[Figtree]">
-    <div class="h-32 w-full"></div>
-    <div class="w-full p-4 md:p-8 bg-slate-200 flex flex-col items-center justify-center">
+    <div class="w-full p-4 md:p-8 bg-slate-200 flex flex-col items-center justify-center mt-24 md:mt-32">
       <div class="w-full bg-white p-4 flex flex-col items-center rounded-tl-3xl rounded-br-3xl">
         <div class="px-8 py-2 bg-[#AA2123] w-fit rounded-4xl">
           <h2 class="text-center text-white text-sm">Notice</h2>
@@ -117,7 +116,6 @@
           </div>
         </div>
       </div>
-
       <div class="w-full gap-2 h-fit bg-slate-200 flex flex-col items-center py-16">
         <div class="w-3/4 flex flex-wrap lg:flex-nowrap items-center justify-between">
           <div class="w-full lg:w-1/2">
