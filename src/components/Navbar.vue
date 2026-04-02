@@ -1,5 +1,6 @@
 <template>
-  <div class="absolute w-full h-24 lg:h-36 flex justify-center items-center z-50">
+  <div class="absolute w-full h-24 lg:h-36 flex justify-center items-center z-50"
+    :class="currentPath.includes('/artisan/garam-') ? 'bg-slate-100' : 'bg-transparent'">
     <div class="w-full md:w-11/12 h-12 lg:h-20 rounded-2xl px-2 lg:px-6 duration-150 delay-75"
       :class="scrollY > 50000 ? 'bg-black/70' : 'bg-transparent'">
       <div class="flex w-full h-full items-center justify-between px-4">
@@ -12,12 +13,13 @@
           <nav class="text-sm lg:text-base nav-font" :class="currentPath == '/' ? 'text-white' : 'text-black'">
             <RouterLink to="/" v-if="currentPath !== '/' && !currentPath.includes('/artisan')"
               class="px-2 py-1 hover:scale-105 text-sm lg:text-xl font-semibold focus:outline-none focus:ring-0"
-              @click="setPath('/')" :class="{ 'text-white text-shadow-2xs': currentPath !== '/' }">
+              @click="setPath('/')"
+              :class="{ 'text-white text-shadow-2xs': currentPath !== '/' && !currentPath.includes('/artisan/garam-') }">
               Brand Kami
             </RouterLink>
             <RouterLink to="/artisan" v-if="currentPath !== '/artisan'"
               class="px-2 py-1 hover:scale-105 text-sm lg:text-xl font-semibold focus:outline-none focus:ring-0"
-              @click="setPath('/artisan')" :class="{ 'text-white text-shadow-2xs': currentPath !== '/artisan' }">
+              @click="setPath('/artisan')" :class="{ 'text-white text-shadow-2xs': !currentPath.includes('/artisan') }">
               Artisan Salt
             </RouterLink>
             <RouterLink to="/hampers" v-if="currentPath !== '/hampers'"
