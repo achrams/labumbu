@@ -167,7 +167,7 @@ import RecommendedRecipe from '@/components/RecommendedRecipe.vue';
 import { useDataStore } from '@/stores';
 import { onMounted, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import artisan from '@/db/artisan';
+import { artisan } from '@/db/artisan';
 
 const store = useDataStore();
 const router = useRouter();

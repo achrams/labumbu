@@ -461,4 +461,4 @@ const artisanList = [
     image: kuwu,
   },
 ];
-export default { artisan, artisanList };
+export { artisan, artisanList };

@@ -2,7 +2,7 @@
   <div
     class="w-full h-full min-h-screen lg:min-h-[950px] flex flex-col items-center relative overflow-hidden bg-[#AA2123]">
     <div class="w-full h-full md:h-screen object-cover relative overflow-hidden z-30">
-      <div class="w-full h-fit absolute z-40">
+      <div class="w-full h-fit absolute z-20">
         <div class="w-full absolute bg-black/40 h-full"></div>
         <img class="h-auto z-30" src="../assets/hampers/header.jpg" alt="header-hampers-page">
       </div>
