@@ -65,5 +65,6 @@
       <h6>Term of Service</h6>
       <h6>Cookie Policy</h6>
     </div>
+    <!-- <img src="../assets/sampling/foot.png" alt="footer-image" class="w-full h-auto bottom-0 absolute"> -->
   </div>
 </template>

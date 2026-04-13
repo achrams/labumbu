@@ -11,6 +11,24 @@ export const useDataStore = defineStore("dataStore", () => {
   const categories = ref([]);
   const recommendations = ref([]);
   const isLoading = ref(false);
+  const showSampleModal = ref(false);
+  const showSampleNotification = ref(false);
+  const notifStatus = ref(false);
+  const notifMessage = ref("");
+
+  const toggleSampleModal = () => {
+    showSampleModal.value = !showSampleModal.value;
+  };
+
+  const toggleSampleNotif = () => {
+    showSampleNotification.value = !showSampleNotification.value;
+  };
+
+  const setNotifPayload = (payload) => {
+    console.log("jalan");
+    notifStatus.value = payload.status;
+    notifMessage.value = payload.message;
+  };
 
   const fetchRecommendationRecipes = async () => {
     isLoading.value = true;
@@ -127,11 +145,18 @@ export const useDataStore = defineStore("dataStore", () => {
     articles,
     categories,
     recommendations,
+    showSampleModal,
+    showSampleNotification,
+    notifStatus,
+    notifMessage,
     fetchRecommendationRecipes,
     fetchArticles,
     fetchArticleById,
     fetchRecipes,
     fetchCategories,
     fetchRecipeById,
+    toggleSampleModal,
+    toggleSampleNotif,
+    setNotifPayload,
   };
 });
