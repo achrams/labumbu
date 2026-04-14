@@ -14,7 +14,9 @@ export const useDataStore = defineStore("dataStore", () => {
   const showSampleModal = ref(false);
   const showSampleNotification = ref(false);
   const notifStatus = ref(false);
-  const notifMessage = ref("");
+  const notifMessage = ref(
+    "Thank you for your enthusiasm, unfortunately our samples ran out faster than expected. Follow our social media to catch our next updates.",
+  );
 
   const toggleSampleModal = () => {
     showSampleModal.value = !showSampleModal.value;

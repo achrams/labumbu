@@ -59,7 +59,7 @@
             Thank you! We’ll reach out to you on WhatsApp shortly with the next steps.</p>
         </div>
       </div>
-      <div class="w-full flex justify-center mt-4 mb-6 lg:mb-8 px-8">
+      <div class="w-full flex justify-center mt-4 mb-6 md:mb-8 px-8">
         <button
           :disabled="!agreed || firstName.length < 3 || lastName.length < 3 || email.length < 4 || phoneNumber.length < 4"
           class="py-3 px-4 w-full lg:w-3/4 rounded-4xl bg-black text-white shadow-sm shadow-black cursor-pointer disabled:cursor-default disabled:bg-gray-700"
@@ -130,7 +130,7 @@ const submitForm = async () => {
         toggleModal()
         toggleNotif(
           true,
-          'Thank you for your enthusiasm, we will be contacting you soon. Follow our social media to catch our next updates.'
+          'We will be contacting you soon. Follow our social media to catch our next updates.'
         )
       })
       .catch(err => {

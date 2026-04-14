@@ -1,10 +1,10 @@
 <template>
   <div class="w-full p-4 z-50">
-    <div class="w-full mt-12 mb-8 font-[FigTree] text-left md:text-justify leading-relaxed p-0 font-light md:p-4">
+    <div class="w-full mt-8 lg:mt-0 mb-8 text-left md:text-center leading-relaxed p-0 font-md md:p-4">
       Rempah dan bumbu premium Indonesia yang dipersembahkan oleh PT Ladara. Kami menghadirkan cita rasa autentik
       dari rempah-rempah pilihan, herbal, serta bahan alami terbaik yang bersumber langsung dari Indonesia. Dengan
       komitmen pada kualitas, keberlanjutan, dan inovasi, Labumbu siap memperkaya pengalaman memasak Anda dengan
-      racikan bumbu yang terinspirasi dari kekayaan kuliner nusantara.
+      racikan bumbu yang terinspirasi dari <br> kekayaan kuliner nusantara.
     </div>
     <div class="p-4 hidden md:block"><img class="w-full" src="../assets/icon/longrect.png" alt="garis_panjang"></div>
     <div class="w-full flex justify-between flex-wrap">
@@ -21,12 +21,11 @@
 
       </div>
       <div class="my-4 z-20 order-4 md:order-3">
-        <div class="nav-font text-black text-md font-bold cursor-pointer text-md z-20 w-fit">Navigation</div>
-        <div class="text-sm">Home</div>
-        <div class="text-sm">About Us</div>
-        <div class="text-sm">Recipes</div>
-        <div class="text-sm">Our Stories</div>
-        <div class="text-sm">Contact Us</div>
+        <div class="nav-font text-black text-md font-bold text-md z-20 w-fit">Navigation</div>
+        <div class="text-sm cursor-pointer" @click="toPage('/')">Home</div>
+        <div class="text-sm cursor-pointer" @click="toPage('/artisan')">Artisan</div>
+        <div class="text-sm cursor-pointer" @click="toPage('/sample')">Sample</div>
+        <div class="text-sm cursor-pointer" @click="toPage('/hampers')">Hampers</div>
       </div>
       <!-- <div class="my-4 z-20">
         <div class="nav-font text-black text-md font-bold cursor-pointer text-md z-20 w-fit">Resources</div>
@@ -37,22 +36,22 @@
       <div class="my-4 z-20 order-3 md:order-4">
         <h5 class="text-center nav-font text-black text-md font-bold">Follow Us</h5>
         <ul class="w-full mt-2 flex md:flex-col gap-3 md:gap-1 items-end md:items-start">
-          <li class="flex gap-2 items-center">
+          <!-- <li class="flex gap-2 items-center">
             <img class="cursor-pointer z-20 h-4" src="../assets/icon/fb.png" alt="facebook">
             <h6 class="text-sm hidden md:block">Facebook</h6>
-          </li>
-          <li class="mt-2 flex gap-2 items-center">
+          </li> -->
+          <li class="mt-2 flex gap-2 items-center" @click="toSite('https://instagram.com/labumbu.id')">
             <img class="cursor-pointer z-20 h-4" src="../assets/icon/ig.png" alt="instagram">
             <h6 class="text-sm hidden md:block">Instagram</h6>
           </li>
-          <li class="mt-2 flex gap-2 items-center">
+          <li class="mt-2 flex gap-2 items-center" @click="toSite('https://tiktok.com/@labumbu.id')">
             <img class="cursor-pointer z-20 h-4" src="../assets/icon/tiktok.png" alt="tiktok">
             <h6 class="text-sm hidden md:block">Tiktok</h6>
           </li>
-          <li class="mt-2 flex gap-2 items-center">
+          <!-- <li class="mt-2 flex gap-2 items-center">
             <img class="cursor-pointer z-20 h-4" src="../assets/icon/youtube.png" alt="youtube">
             <h6 class="text-sm hidden md:block">Youtube</h6>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -60,11 +59,23 @@
     <div class="text-center md:text-left text-black text-xs">
       <p>© 2025 Labumbu. All rights reserved.</p>
     </div>
-    <div class="w-full flex justify-center md:justify-end gap-3 text-black text-xs">
+    <!-- <div class="w-full flex justify-center md:justify-end gap-3 text-black text-xs">
       <h6>Privacy Policy</h6>
       <h6>Term of Service</h6>
       <h6>Cookie Policy</h6>
-    </div>
+    </div> -->
     <!-- <img src="../assets/sampling/foot.png" alt="footer-image" class="w-full h-auto bottom-0 absolute"> -->
   </div>
 </template>
+<script setup>
+import { useRouter } from 'vue-router';
+const router = useRouter()
+
+const toPage = (path) => {
+  router.push(path)
+}
+
+const toSite = (url) => {
+  window.open(url, '_blank')
+}
+</script>

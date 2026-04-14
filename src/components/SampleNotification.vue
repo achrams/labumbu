@@ -8,9 +8,9 @@
         <img v-if="status" class="w-full" src="../assets/icon/success.png" alt="success-logo-notification">
         <img v-else class="w-full" src="../assets/icon/failed.png" alt="failed-logo-notification">
       </div>
-      <div class="w-fit font-extrabold text-2xl">
-        {{ status == true ? 'Success' : 'Failed' }}
-      </div>
+      <!-- <div class="w-fit font-extrabold text-2xl">
+        {{ status == true ? 'Success' : '' }}
+      </div> -->
       <div class="w-full text-center px-6 mt-4">
         <h5 class="text-gray-500">{{ message }}</h5>
       </div>
