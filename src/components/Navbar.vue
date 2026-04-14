@@ -8,12 +8,14 @@
       <div class="flex w-full h-full items-center justify-between px-4">
         <!-- LOGO -->
         <RouterLink to="/">
-          <img v-if="isHome" src="../assets/logo/labumbu-putih.png" alt="logo-labumbu" class="w-20 lg:w-32 h-auto" />
+          <img v-if="isHome && scrollY < 100" src="../assets/logo/labumbu-putih.png" alt="logo-labumbu"
+            class="w-20 lg:w-32 h-auto" />
           <img v-else src="../assets/logo/labumbu-orange.png" alt="logo-labumbu-orange" class="w-20 lg:w-32 h-auto" />
         </RouterLink>
 
         <!-- NAV -->
-        <nav class="text-sm lg:text-base nav-font hidden md:flex gap-2" :class="isHome ? 'text-white' : 'text-black'">
+        <nav class="text-sm lg:text-base nav-font hidden md:flex gap-2"
+          :class="isHome && scrollY < 100 ? 'text-white' : 'text-black'">
           <!-- Brand Kami -->
           <RouterLink v-if="!isHome && !isArtisanDetail" to="/"
             class="px-2 py-1 hover:scale-105 text-sm lg:text-xl font-semibold transition">
