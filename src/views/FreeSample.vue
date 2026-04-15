@@ -9,8 +9,9 @@
       <!-- SPLIDE -->
       <div class="w-full h-screen">
         <Splide :options="opt" aria-label="Artisan Salts Sampling Headers">
-          <SplideSlide v-for="img in headerImages" :key="img.title">
-            <img :src="img.url" :alt="img.title" class="w-full h-screen object-cover" :class="img.customClass">
+          <SplideSlide v-for="img in headerImages" :key="img.alt">
+            <img :src="img.url" :alt="img.alt" loading="lazy" class="w-full h-screen object-cover"
+              :class="img.customClass" />
           </SplideSlide>
         </Splide>
       </div>
@@ -22,15 +23,17 @@
         <div
           class="w-full lg:w-3/7 flex flex-col justify-between items-center lg:items-start gap-10 mt-0 pointer-events-auto">
 
-          <h1
+          <p
             class="font-extrabold text-white text-4xl lg:text-5xl text-start md:text-center lg:text-start [text-shadow:0_0_10px_rgba(0,0,0,0.8)]">
             Discover Hidden Treasures from Indonesia’s Nature, Brought Into Your Daily Cooking Through Salt
-          </h1>
+          </p>
 
           <a href="#sample-here"
             class="flex flex-col lg:flex-row items-center gap-2 [text-shadow:0_0_10px_rgba(0,0,0,0.8)] text-white font-semibold text-4xl z-20 w-fit cursor-pointer py-2"
             v-smooth-scroll>
-            Get Free Sample
+            <h1>
+              Get Free Sample
+            </h1>
             <img class="w-7 mt-2 animate-bounce duration-1000" src="../assets/icon/chevron-down.png" alt="up-btn">
           </a>
 
@@ -98,12 +101,54 @@ import fifth from '../assets/sampling/fifth.webp'
 import fifthAlt from '../assets/sampling/fifth_alt.jpeg'
 const isMobile = window.innerWidth <= 768;
 
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'Garam Tradisional Premium Indonesia | LaBumbu',
+  meta: [
+    {
+      name: 'description',
+      content: 'Coba garam tradisional premium dari Indonesia. LaBumbu menghadirkan garam alami dari berbagai daerah seperti Bali, Krayan, dan Bledug Kuwu.'
+    },
+    {
+      name: 'keywords',
+      content: 'garam indonesia, garam tradisional, garam premium, garam bali, garam krayan, garam bledug kuwu'
+    },
+    {
+      property: 'og:title',
+      content: 'Garam Tradisional Premium Indonesia | LaBumbu'
+    },
+    {
+      property: 'og:description',
+      content: 'Discover artisan salt from Indonesia. Try free samples from LaBumbu.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    }
+  ], script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Garam Tradisional LaBumbu",
+        "description": "Garam alami premium dari Indonesia",
+        "brand": {
+          "@type": "Brand",
+          "name": "LaBumbu"
+        }
+      })
+    }
+  ]
+})
+
 const headerImages = [
-  { url: (isMobile ? fifthAlt : fifth), title: 'labumbu-sampling-header-garam-artisan', customClass: 'object-[60%_50%]' },
-  { url: first, title: 'labumbu-sampling-header-garam-krayan', customClass: 'object-right' },
-  { url: third, title: 'labumbu-sampling-header-garam-nipah', customClass: 'object-[center_32%]' },
-  { url: fourth, title: 'labumbu-sampling-header-garam-bali', customClass: 'object-[center_30%]' },
-  { url: second, title: 'labumbu-sampling-header-garam-bledug-kuwu', customClass: 'object-[65%_50%]' },
+  { url: (isMobile ? fifthAlt : fifth), alt: 'garam artisan indonesia premium labumbu', customClass: 'object-[60%_50%]' },
+  { url: first, alt: 'garam krayan kalimantan premium', customClass: 'object-right' },
+  { url: third, alt: 'garam nipah alami indonesia', customClass: 'object-[center_32%]' },
+  { url: fourth, alt: 'garam bali tradisional', customClass: 'object-[center_30%]' },
+  { url: second, alt: 'garam bledug kuwu jawa tengah', customClass: 'object-[65%_50%]' },
 ]
 
 const showSampleModal = computed(() => store.showSampleModal)
