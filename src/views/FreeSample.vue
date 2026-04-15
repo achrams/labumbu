@@ -29,7 +29,7 @@
           </p>
 
           <a href="#sample-here"
-            class="flex flex-col lg:flex-row items-center gap-2 [text-shadow:0_0_10px_rgba(0,0,0,0.8)] text-white font-semibold text-4xl z-20 w-fit cursor-pointer py-2"
+            class="flex flex-col lg:flex-row items-center gap-2 text-[#AA2123] font-semibold text-4xl z-20 w-fit cursor-pointer py-2"
             v-smooth-scroll>
             <h1>
               Get Free Sample
