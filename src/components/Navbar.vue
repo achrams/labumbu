@@ -16,10 +16,10 @@
         <!-- NAV -->
         <nav class="text-sm lg:text-base nav-font hidden md:flex gap-2"
           :class="isHome && scrollY < 100 ? 'text-white' : 'text-black'">
-          <!-- Brand Kami -->
+          <!-- Our Brand -->
           <RouterLink v-if="!isHome && !isArtisanDetail" to="/"
             class="px-2 py-1 hover:scale-105 text-sm lg:text-xl font-semibold transition">
-            Brand Kami
+            Our Brand
           </RouterLink>
 
           <!-- Artisan -->
@@ -49,7 +49,7 @@
         </div>
         <RouterLink @click="showSidebar = false" v-if="!isHome && !isArtisanDetail" to="/"
           class="p-4 hover:scale-105 text-xl text-right font-semibold transition w-full">
-          Brand Kami
+          Our Brand
         </RouterLink>
         <RouterLink @click="showSidebar = false" v-if="!isArtisan" to="/artisan"
           class="p-4 hover:scale-105 text-xl text-right font-semibold transition w-full">
