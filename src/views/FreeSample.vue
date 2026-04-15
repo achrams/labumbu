@@ -87,6 +87,8 @@
 import { useDataStore } from '@/stores';
 const store = useDataStore();
 
+import { useHead } from '@vueuse/head'
+
 import Footer from '@/components/Footer.vue';
 import FormInput from '@/components/FormInput.vue';
 import { computed } from 'vue';
@@ -104,8 +106,6 @@ import fourthMobile from '../assets/sampling/labumbu-garam-bledug-kuwu-mobile.jp
 import fifth from '../assets/sampling/labumbu-artisan-salt.jpg'
 import fifthMobile from '../assets/sampling/fifth_alt.jpeg'
 const isMobile = window.innerWidth <= 768;
-
-import { useHead } from '@vueuse/head'
 
 useHead({
   title: 'Garam Tradisional Premium Indonesia | LaBumbu',
