@@ -44,7 +44,7 @@
     <!-- SECTION 2 -->
     <div class="w-full min-h-screen h-max flex flex-col items-center justify-start relative">
       <img class="w-full object-cover object-[60%_50%] lg:object-right absolute z-10 h-[120vh] lg:h-auto"
-        src="../assets/sampling/petani-tejakula.jpg" alt="second-sample-image-header" />
+        src="../assets/sampling/petani-tejakula.webp" alt="second-sample-image-header" />
 
       <div class="w-full h-24 z-40 absolute top-0 -mt-20" id="sample-here"></div>
 
@@ -95,16 +95,16 @@ import { computed } from 'vue';
 import SampleNotification from '@/components/SampleNotification.vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 
-import first from '../assets/sampling/labumbu-garam-krayan.jpg'
-import firstMobile from '../assets/sampling/labumbu-garam-krayan-mobile.jpg'
-import second from '../assets/sampling/labumbu-garam-nipah-papua.jpg'
-import secondMobile from '../assets/sampling/labumbu-garam-nipah-papua-mobile.jpg'
-import third from '../assets/sampling/labumbu-artisan-salt-bali.jpg'
-import thirdMobile from '../assets/sampling/labumbu-artisan-salt-bali-mobile.jpg'
-import fourth from '../assets/sampling/labumbu-garam-bledug-kuwu.jpg'
-import fourthMobile from '../assets/sampling/labumbu-garam-bledug-kuwu-mobile.jpg'
-import fifth from '../assets/sampling/labumbu-artisan-salt.jpg'
-import fifthMobile from '../assets/sampling/fifth_alt.jpeg'
+import first from '../assets/sampling/labumbu-garam-krayan.webp'
+import firstMobile from '../assets/sampling/labumbu-garam-krayan-mobile.webp'
+import second from '../assets/sampling/labumbu-garam-nipah-papua.webp'
+import secondMobile from '../assets/sampling/labumbu-garam-nipah-papua-mobile.webp'
+import third from '../assets/sampling/labumbu-artisan-salt-bali.webp'
+import thirdMobile from '../assets/sampling/labumbu-artisan-salt-bali-mobile.webp'
+import fourth from '../assets/sampling/labumbu-garam-bledug-kuwu.webp'
+import fourthMobile from '../assets/sampling/labumbu-garam-bledug-kuwu-mobile.webp'
+import fifth from '../assets/sampling/labumbu-artisan-salt.webp'
+import fifthMobile from '../assets/sampling/fifth_alt.webp'
 const isMobile = window.innerWidth <= 768;
 
 useHead({

@@ -46,7 +46,7 @@
         <div class="w-9/10 text-justify">
           <p class="text-gray-500 text-xs lg:text-md">I confirm that I am above 18 years and consent for data processing
             in brand
-            promotions purpose only.</p>
+            promotions purpose only.*</p>
         </div>
       </div>
       <div class="w-full px-8 lg:px-12 flex items-center gap-2">
