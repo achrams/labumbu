@@ -40,10 +40,10 @@
 
     <!-- SECTION 2 -->
     <div class="w-full min-h-screen h-max flex flex-col items-center justify-start relative">
-      <img class="w-full object-cover object-[60%_50%] lg:object-right absolute z-10 h-[150vh] lg:h-auto"
+      <img class="w-full object-cover object-[60%_50%] lg:object-right absolute z-10 h-[120vh] lg:h-auto"
         src="../assets/sampling/second_banner.jpg" alt="second-sample-image-header" />
 
-      <div class="w-full h-24 z-40 absolute top-0 -mt-22" id="sample-here"></div>
+      <div class="w-full h-24 z-40 absolute top-0" id="sample-here"></div>
 
       <div class="w-full z-20 p-8 lg:p-24 lg:mb-40 h-max">
         <div class="w-full lg:w-1/3 h-max bg-white px-8 pt-12 pb-10 flex flex-col gap-6 mt-40 lg:mt-0">

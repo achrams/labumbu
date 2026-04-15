@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-4 p-8 z-50 mt-90 lg:mt-60">
+  <div class="w-full px-4 p-8 z-50 mt-50 lg:mt-60">
     <div class="w-full mt-8 mb-8 text-justify md:text-center leading-relaxed p-0 font-md md:p-4">
       Rempah dan bumbu premium Indonesia yang dipersembahkan oleh PT Ladara. Kami menghadirkan cita rasa autentik
       dari rempah-rempah pilihan, herbal, serta bahan alami terbaik yang bersumber langsung dari Indonesia. Dengan
