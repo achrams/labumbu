@@ -94,11 +94,15 @@ import SampleNotification from '@/components/SampleNotification.vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 
 import first from '../assets/sampling/labumbu-garam-krayan.jpg'
+import firstMobile from '../assets/sampling/labumbu-garam-krayan-mobile.jpg'
 import second from '../assets/sampling/labumbu-garam-nipah-papua.jpg'
+import secondMobile from '../assets/sampling/labumbu-garam-nipah-papua-mobile.jpg'
 import third from '../assets/sampling/labumbu-artisan-salt-bali.jpg'
+import thirdMobile from '../assets/sampling/labumbu-artisan-salt-bali-mobile.jpg'
 import fourth from '../assets/sampling/labumbu-garam-bledug-kuwu.jpg'
+import fourthMobile from '../assets/sampling/labumbu-garam-bledug-kuwu-mobile.jpg'
 import fifth from '../assets/sampling/labumbu-artisan-salt.jpg'
-import fifthAlt from '../assets/sampling/fifth_alt.jpeg'
+import fifthMobile from '../assets/sampling/fifth_alt.jpeg'
 const isMobile = window.innerWidth <= 768;
 
 import { useHead } from '@vueuse/head'
@@ -144,11 +148,11 @@ useHead({
 })
 
 const headerImages = [
-  { url: (isMobile ? fifthAlt : fifth), alt: 'garam artisan indonesia premium labumbu', customClass: 'object-[60%_50%]' },
-  { url: first, alt: 'garam krayan kalimantan premium', customClass: 'object-right' },
-  { url: second, alt: 'garam nipah alami indonesia', customClass: 'object-[center_32%]' },
-  { url: third, alt: 'garam bali tradisional', customClass: 'object-[center_30%]' },
-  { url: fourth, alt: 'garam bledug kuwu jawa tengah', customClass: 'object-[65%_50%]' },
+  { url: (isMobile ? fifthMobile : fifth), alt: 'garam artisan indonesia premium labumbu' },
+  { url: (isMobile ? firstMobile : first), alt: 'garam krayan kalimantan premium' },
+  { url: (isMobile ? secondMobile : second), alt: 'garam nipah alami indonesia' },
+  { url: (isMobile ? thirdMobile : third), alt: 'garam bali tradisional' },
+  { url: (isMobile ? fourthMobile : fourth), alt: 'garam bledug kuwu jawa tengah' },
 ]
 
 const showSampleModal = computed(() => store.showSampleModal)
