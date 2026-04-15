@@ -44,7 +44,7 @@
     <!-- SECTION 2 -->
     <div class="w-full min-h-screen h-max flex flex-col items-center justify-start relative">
       <img class="w-full object-cover object-[60%_50%] lg:object-right absolute z-10 h-[120vh] lg:h-auto"
-        src="../assets/sampling/second_banner.jpg" alt="second-sample-image-header" />
+        src="../assets/sampling/petani-tejakula.jpg" alt="second-sample-image-header" />
 
       <div class="w-full h-24 z-40 absolute top-0 -mt-20" id="sample-here"></div>
 
@@ -93,11 +93,11 @@ import { computed } from 'vue';
 import SampleNotification from '@/components/SampleNotification.vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 
-import first from '../assets/sampling/first.jpg'
-import second from '../assets/sampling/second.webp'
-import third from '../assets/sampling/third.png'
-import fourth from '../assets/sampling/fourth.jpg'
-import fifth from '../assets/sampling/fifth.webp'
+import first from '../assets/sampling/labumbu-garam-krayan.jpg'
+import second from '../assets/sampling/labumbu-garam-nipah-papua.jpg'
+import third from '../assets/sampling/labumbu-artisan-salt-bali.jpg'
+import fourth from '../assets/sampling/labumbu-garam-bledug-kuwu.jpg'
+import fifth from '../assets/sampling/labumbu-artisan-salt.jpg'
 import fifthAlt from '../assets/sampling/fifth_alt.jpeg'
 const isMobile = window.innerWidth <= 768;
 
@@ -146,9 +146,9 @@ useHead({
 const headerImages = [
   { url: (isMobile ? fifthAlt : fifth), alt: 'garam artisan indonesia premium labumbu', customClass: 'object-[60%_50%]' },
   { url: first, alt: 'garam krayan kalimantan premium', customClass: 'object-right' },
-  { url: third, alt: 'garam nipah alami indonesia', customClass: 'object-[center_32%]' },
-  { url: fourth, alt: 'garam bali tradisional', customClass: 'object-[center_30%]' },
-  { url: second, alt: 'garam bledug kuwu jawa tengah', customClass: 'object-[65%_50%]' },
+  { url: second, alt: 'garam nipah alami indonesia', customClass: 'object-[center_32%]' },
+  { url: third, alt: 'garam bali tradisional', customClass: 'object-[center_30%]' },
+  { url: fourth, alt: 'garam bledug kuwu jawa tengah', customClass: 'object-[65%_50%]' },
 ]
 
 const showSampleModal = computed(() => store.showSampleModal)
