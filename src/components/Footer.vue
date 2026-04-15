@@ -1,26 +1,26 @@
 <template>
-  <div class="w-full p-4 z-50">
-    <div class="w-full mt-8 lg:mt-0 mb-8 text-left md:text-center leading-relaxed p-0 font-md md:p-4">
+  <div class="w-full px-4 p-8 z-50 mt-90 lg:mt-60">
+    <div class="w-full mt-8 mb-8 text-justify md:text-center leading-relaxed p-0 font-md md:p-4">
       Rempah dan bumbu premium Indonesia yang dipersembahkan oleh PT Ladara. Kami menghadirkan cita rasa autentik
       dari rempah-rempah pilihan, herbal, serta bahan alami terbaik yang bersumber langsung dari Indonesia. Dengan
       komitmen pada kualitas, keberlanjutan, dan inovasi, Labumbu siap memperkaya pengalaman memasak Anda dengan
-      racikan bumbu yang terinspirasi dari <br> kekayaan kuliner nusantara.
+      racikan bumbu yang terinspirasi dari kekayaan kuliner nusantara.
     </div>
     <div class="p-4 hidden md:block"><img class="w-full" src="../assets/icon/longrect.png" alt="garis_panjang"></div>
-    <div class="w-full flex justify-between flex-wrap">
+    <div class="w-full flex flex-wrap px-0 lg:px-8">
       <div class="flex flex-col order-1">
-        <div class="my-4 z-20">
+        <div class="my-4 z-20 w-full lg:w-3/5">
           <div class="nav-font text-black text-md font-bold cursor-pointer text-md z-20 w-fit">Address</div>
-          <div class="text-sm">Jl. Cililitan Besar 2 Jakarta Timur</div>
+          <div class="text-sm">Jl. Cililitan Besar No.2, Kb. Pala, Kec. Makasar, Kota Jakarta Timur, Daerah
+            Khusus Ibukota Jakarta</div>
         </div>
-        <div class="my-4 z-20 order-2">
+        <div class="my-4 z-20 order-2 w-full lg:w-3/5">
           <div class="nav-font text-black text-md font-bold cursor-pointer text-md z-20 w-fit">Contact</div>
-          <div class="text-sm">+62 8312 8282</div>
-          <div class="text-sm">info@labumbu.com</div>
+          <div class="text-sm">+62 822-4669-0250</div>
+          <div class="text-sm">labumbu.id@gmail.com</div>
         </div>
-
       </div>
-      <div class="my-4 z-20 order-4 md:order-3">
+      <div class="my-4 z-20 order-4 md:order-3 w-full lg:w-1/5 bg-red-2">
         <div class="nav-font text-black text-md font-bold text-md z-20 w-fit">Navigation</div>
         <div class="text-sm cursor-pointer" @click="toPage('/')">Home</div>
         <div class="text-sm cursor-pointer" @click="toPage('/artisan')">Artisan</div>
@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <div class="text-center md:text-left text-black text-xs">
+    <div class="text-center md:text-left text-black text-xs p-0 lg:px-8">
       <p>© 2025 Labumbu. All rights reserved.</p>
     </div>
     <!-- <div class="w-full flex justify-center md:justify-end gap-3 text-black text-xs">
