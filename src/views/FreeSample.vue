@@ -43,10 +43,10 @@
       <img class="w-full object-cover object-[60%_50%] lg:object-right absolute z-10 h-[120vh] lg:h-auto"
         src="../assets/sampling/second_banner.jpg" alt="second-sample-image-header" />
 
-      <div class="w-full h-24 z-40 absolute top-0" id="sample-here"></div>
+      <div class="w-full h-24 z-40 absolute top-0 -mt-20" id="sample-here"></div>
 
       <div class="w-full z-20 p-8 lg:p-24 lg:mb-40 h-max">
-        <div class="w-full lg:w-1/3 h-max bg-white px-8 pt-12 pb-10 flex flex-col gap-6 mt-20 lg:mt-0">
+        <div class="w-full lg:w-1/3 h-max bg-white px-8 pt-12 pb-10 flex flex-col gap-6">
 
           <h3 class="text-4xl lg:text-5xl font-extrabold">
             Try Nature’s <br> Truest Flavor.
@@ -91,10 +91,10 @@ import SampleNotification from '@/components/SampleNotification.vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 
 import first from '../assets/sampling/first.jpg'
-import second from '../assets/sampling/second.jpg'
+import second from '../assets/sampling/second.webp'
 import third from '../assets/sampling/third.png'
 import fourth from '../assets/sampling/fourth.jpg'
-import fifth from '../assets/sampling/fifth.jpg'
+import fifth from '../assets/sampling/fifth.webp'
 import fifthAlt from '../assets/sampling/fifth_alt.jpeg'
 const isMobile = window.innerWidth <= 768;
 
