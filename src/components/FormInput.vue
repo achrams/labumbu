@@ -55,8 +55,7 @@
         </div>
         <div class="w-9/10 text-justify">
           <p class="text-gray-500 text-xs lg:text-md">I agree to receive newsletters and marketing communications from
-            the brand.
-            Thank you! We’ll reach out to you on WhatsApp shortly with the next steps.</p>
+            the brand.</p>
         </div>
       </div>
       <div class="w-full flex justify-center mt-4 mb-6 md:mb-8 px-8">
