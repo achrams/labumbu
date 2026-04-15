@@ -46,7 +46,7 @@
       <div class="w-full h-24 z-40 absolute top-0 -mt-20" id="sample-here"></div>
 
       <div class="w-full z-20 p-8 lg:p-24 lg:mb-40 h-max">
-        <div class="w-full lg:w-1/3 h-max bg-white px-8 pt-12 pb-10 mt-12 flex flex-col gap-6">
+        <div class="w-full lg:w-1/3 h-max bg-white px-8 pt-12 pb-10 mt-7 flex flex-col gap-6">
 
           <h3 class="text-4xl lg:text-5xl font-extrabold">
             Try Nature’s <br> Truest Flavor.
