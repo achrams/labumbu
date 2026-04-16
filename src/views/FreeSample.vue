@@ -9,19 +9,28 @@
       <!-- SPLIDE -->
       <div class="w-full h-screen">
         <Splide :options="opt" aria-label="Artisan Salts Sampling Headers">
-          <SplideSlide v-for="img in headerImages" :key="img.alt">
-            <img :src="img.url" :alt="img.alt" loading="lazy" class="w-full h-screen object-cover"
-              :class="img.customClass" />
+          <SplideSlide v-for="(img, index) in headerImages" :key="img.alt">
+
+            <!-- ✅ RESPONSIVE IMAGE -->
+            <picture>
+              <!-- Mobile -->
+              <source :srcset="img.mobile" media="(max-width: 768px)" />
+
+              <!-- Desktop -->
+              <img :src="img.desktop" :alt="img.alt" class="w-full h-screen object-cover"
+                :loading="index === 0 ? 'eager' : 'lazy'" :fetchpriority="index === 0 ? 'high' : 'auto'" />
+            </picture>
+
           </SplideSlide>
         </Splide>
       </div>
 
-      <!-- OVERLAY (FIX DI SINI) -->
+      <!-- OVERLAY -->
       <div
         class="w-full z-20 p-8 lg:pt-4 lg:px-24 h-screen absolute top-0 flex flex-col justify-center pointer-events-none">
 
         <div
-          class="w-full lg:w-3/7 flex flex-col justify-between items-center lg:items-start gap-10 mt-0 pointer-events-auto">
+          class="w-full lg:w-3/7 flex flex-col justify-between items-center lg:items-start gap-10 pointer-events-auto">
 
           <p
             class="font-extrabold text-white text-4xl lg:text-5xl text-start md:text-center lg:text-start [text-shadow:0_0_10px_rgba(0,0,0,0.8)]">
@@ -29,36 +38,38 @@
           </p>
 
           <a href="#sample-here"
-            class="flex flex-col lg:flex-row items-center gap-2 text-[#AA2123] font-semibold text-4xl z-20 w-fit cursor-pointer py-2"
+            class="flex flex-col lg:flex-row items-center gap-2 [text-shadow:3px_3px_2px_rgba(0,0,0,1)] text-white font-semibold text-4xl z-20 w-fit cursor-pointer py-2"
             v-smooth-scroll>
-            <h1>
-              Get Free Sample
-            </h1>
-            <img class="w-7 mt-2 animate-bounce duration-1000" src="../assets/icon/chevron-down.png" alt="up-btn">
-          </a>
 
+            <h1>Get Free Sample</h1>
+
+            <img src="../assets/icon/chevron-down-white.png"
+              class="mt-2 w-9 animate-bounce [filter:drop-shadow(3px_3px_2px_rgba(0,0,0,1))]" alt="scroll down"
+              loading="lazy" />
+
+          </a>
         </div>
       </div>
     </div>
 
     <!-- SECTION 2 -->
-    <div class="w-full min-h-screen h-max flex flex-col items-center justify-start relative">
+    <div class="w-full min-h-screen flex flex-col items-center relative">
+
+      <!-- ✅ bisa juga dijadiin picture kalau mau -->
       <img class="w-full object-cover object-[60%_50%] lg:object-right absolute z-10 h-[120vh] lg:h-auto"
-        src="../assets/sampling/petani-tejakula.webp" alt="second-sample-image-header" />
+        src="../assets/sampling/petani-tejakula.webp" alt="petani garam tejakula bali" loading="lazy" />
 
       <div class="w-full h-24 z-40 absolute top-0 -mt-20" id="sample-here"></div>
 
-      <div class="w-full z-20 p-8 lg:p-24 lg:mb-40 h-max">
-        <div class="w-full lg:w-1/3 h-max bg-white px-8 pt-12 pb-10 mt-7 flex flex-col gap-6">
+      <div class="w-full z-20 p-8 lg:p-24 lg:mb-40">
+        <div class="w-full lg:w-1/3 bg-white px-8 pt-12 pb-10 mt-7 flex flex-col gap-6">
 
           <h3 class="text-4xl lg:text-5xl font-extrabold">
             Try Nature’s <br> Truest Flavor.
           </h3>
 
           <p>
-            Experience the purity of natural salt with carefully sourced artisan salt from Indonesia. For each free
-            sample, discover how real purity brings out the true flavor of your cooking, without impurities getting in
-            the way.
+            Experience the purity of natural salt with carefully sourced artisan salt from Indonesia.
           </p>
 
           <div class="w-full flex justify-center">
@@ -77,24 +88,17 @@
   </div>
 </template>
 
-<style>
-/* OPTIONAL: pastikan arrow selalu di atas */
-.splide__arrow {
-  z-index: 30 !important;
-}
-</style>
 <script setup>
-import { useDataStore } from '@/stores';
-const store = useDataStore();
-
+import { useDataStore } from '@/stores'
 import { useHead } from '@vueuse/head'
+import { computed } from 'vue'
 
-import Footer from '@/components/Footer.vue';
-import FormInput from '@/components/FormInput.vue';
-import { computed } from 'vue';
-import SampleNotification from '@/components/SampleNotification.vue';
-import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import Footer from '@/components/Footer.vue'
+import FormInput from '@/components/FormInput.vue'
+import SampleNotification from '@/components/SampleNotification.vue'
+import { Splide, SplideSlide } from '@splidejs/vue-splide'
 
+// images
 import first from '../assets/sampling/labumbu-garam-krayan.webp'
 import firstMobile from '../assets/sampling/labumbu-garam-krayan-mobile.webp'
 import second from '../assets/sampling/labumbu-garam-nipah-papua.webp'
@@ -105,66 +109,44 @@ import fourth from '../assets/sampling/labumbu-garam-bledug-kuwu.webp'
 import fourthMobile from '../assets/sampling/labumbu-garam-bledug-kuwu-mobile.webp'
 import fifth from '../assets/sampling/labumbu-artisan-salt.webp'
 import fifthMobile from '../assets/sampling/fifth_alt.webp'
-const isMobile = window.innerWidth <= 768;
 
+const store = useDataStore()
+
+// ✅ SEO + preload hero image
 useHead({
   title: 'Garam Tradisional Premium Indonesia | LaBumbu',
   meta: [
     {
       name: 'description',
-      content: 'Coba garam tradisional premium dari Indonesia. LaBumbu menghadirkan garam alami dari berbagai daerah seperti Bali, Krayan, dan Bledug Kuwu.'
-    },
-    {
-      name: 'keywords',
-      content: 'garam indonesia, garam tradisional, garam premium, garam bali, garam krayan, garam bledug kuwu'
-    },
-    {
-      property: 'og:title',
-      content: 'Garam Tradisional Premium Indonesia | LaBumbu'
-    },
-    {
-      property: 'og:description',
-      content: 'Discover artisan salt from Indonesia. Try free samples from LaBumbu.'
-    },
-    {
-      property: 'og:type',
-      content: 'website'
+      content: 'Coba garam tradisional premium dari Indonesia.'
     }
-  ], script: [
+  ],
+  link: [
     {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Garam Tradisional LaBumbu",
-        "description": "Garam alami premium dari Indonesia",
-        "brand": {
-          "@type": "Brand",
-          "name": "LaBumbu"
-        }
-      })
+      rel: 'preload',
+      as: 'image',
+      href: fifth
     }
   ]
 })
 
+// ✅ responsive image config
 const headerImages = [
-  { url: (isMobile ? fifthMobile : fifth), alt: 'garam artisan indonesia premium labumbu' },
-  { url: (isMobile ? firstMobile : first), alt: 'garam krayan kalimantan premium' },
-  { url: (isMobile ? secondMobile : second), alt: 'garam nipah alami indonesia' },
-  { url: (isMobile ? thirdMobile : third), alt: 'garam bali tradisional' },
-  { url: (isMobile ? fourthMobile : fourth), alt: 'garam bledug kuwu jawa tengah' },
+  { desktop: fifth, mobile: fifthMobile, alt: 'garam artisan indonesia premium labumbu' },
+  { desktop: first, mobile: firstMobile, alt: 'garam krayan kalimantan premium' },
+  { desktop: second, mobile: secondMobile, alt: 'garam nipah alami indonesia' },
+  { desktop: third, mobile: thirdMobile, alt: 'garam bali tradisional' },
+  { desktop: fourth, mobile: fourthMobile, alt: 'garam bledug kuwu jawa tengah' },
 ]
 
 const showSampleModal = computed(() => store.showSampleModal)
 const showSampleNotification = computed(() => store.showSampleNotification)
 
-const toggleModal = async () => {
-  // const res = await fetch('/api/get-total')
-  // const data = await res.json();
-  // console.log(data.total);
+const toggleModal = () => {
   store.toggleSampleModal()
 }
 
+// splide config
 const opt = {
   rewind: true,
   perPage: 1,
@@ -175,5 +157,10 @@ const opt = {
   interval: 5000,
   speed: 1500
 }
-
 </script>
+
+<style>
+.splide__arrow {
+  z-index: 30 !important;
+}
+</style>
