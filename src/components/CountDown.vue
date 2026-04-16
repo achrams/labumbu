@@ -28,9 +28,10 @@ import { ref } from 'vue'
 
 const targetDate = new Date('2025-12-22T23:59:59').getTime()
 const timeLeft = ref(targetDate - Date.now())
-const showCountdown = ref(true)
+const showCountdown = ref(false)
 setInterval(() => {
   timeLeft.value = targetDate - Date.now()
-  if (timeLeft.value <= 0) showCountdown.value = false
+  if (timeLeft.value > 0) showCountdown.value = true
+  else if (timeLeft.value <= 0) showCountdown.value = false
 }, 1000)
 </script>

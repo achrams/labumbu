@@ -10,7 +10,7 @@
     </div>
     <div class="bg-gradient-to-b from-[#26190E] via-transparent absolute top-0 w-full"></div>
 
-    <div class="w-full px-8 lg:h-screen flex flex-col items-center justify-center absolute mt-24 md:mt-12 z-50">
+    <div class="w-full px-8 lg:h-screen flex flex-col items-center justify-center absolute mt-24 md:mt-12 z-40">
       <transition name="slide-up">
         <h1 v-if="playTitle[0]"
           class="text-xl md:text-3xl lg:text-4xl text-white text-center font-[Kaisei] font-semibold">Celebrate the

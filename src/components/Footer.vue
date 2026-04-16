@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-4 p-8 z-50 mt-35 lg:mt-50">
+  <div class="w-full px-4 p-8 z-50">
     <div class="w-full mt-8 mb-8 text-justify md:text-center leading-relaxed p-0 font-md md:p-4">
       Rempah dan bumbu premium Indonesia yang dipersembahkan oleh PT Ladara. Kami menghadirkan cita rasa autentik
       dari rempah-rempah pilihan, herbal, serta bahan alami terbaik yang bersumber langsung dari Indonesia. Dengan
@@ -42,11 +42,11 @@
           </li> -->
           <li class="mt-2 flex gap-2 items-center" @click="toSite('https://instagram.com/labumbu.id')">
             <img class="cursor-pointer z-20 h-4" src="../assets/icon/ig.png" alt="instagram">
-            <h6 class="text-sm hidden md:block">Instagram</h6>
+            <h6 class="text-sm hidden md:block cursor-pointer">Instagram</h6>
           </li>
           <li class="mt-2 flex gap-2 items-center" @click="toSite('https://tiktok.com/@labumbu.id')">
             <img class="cursor-pointer z-20 h-4" src="../assets/icon/tiktok.png" alt="tiktok">
-            <h6 class="text-sm hidden md:block">Tiktok</h6>
+            <h6 class="text-sm hidden md:block cursor-pointer">Tiktok</h6>
           </li>
           <!-- <li class="mt-2 flex gap-2 items-center">
             <img class="cursor-pointer z-20 h-4" src="../assets/icon/youtube.png" alt="youtube">
