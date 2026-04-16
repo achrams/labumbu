@@ -69,7 +69,9 @@
           </h3>
 
           <p>
-            Experience the purity of natural salt with carefully sourced artisan salt from Indonesia.
+            Experience the purity of natural salt with carefully sourced artisan salt from Indonesia. For each free
+            sample, discover how real purity brings out the true flavor of your cooking, without impurities getting in
+            the way.
           </p>
 
           <div class="w-full flex justify-center">
