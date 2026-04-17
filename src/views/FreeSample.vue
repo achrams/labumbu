@@ -81,7 +81,7 @@
                   </div>
                 </div>
               </div>
-              <div class="w-full flex justify-center">
+              <div class="w-full flex justify-center mt-4">
                 <div class="w-full h-[120px] lg:h-[165px] flex justify-center gap-4">
                   <div class="h-full w-1/4">
                     <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
@@ -185,7 +185,7 @@
           <div class="w-full h-24 z-40 absolute top-0 -mt-20" id="sample-here"></div>
 
           <div class="w-full z-20 p-8 lg:p-24 lg:mb-40">
-            <div class="w-full lg:w-1/3 bg-white px-8 pt-12 pb-10 mt-7 flex flex-col gap-6">
+            <div class="w-full lg:w-[27vw] bg-white px-8 pt-12 pb-10 mt-7 flex flex-col gap-6">
 
               <h3 class="text-4xl lg:text-5xl font-extrabold">
                 Try Nature’s <br> Truest Flavor.
