@@ -107,7 +107,7 @@
               </div>
             </div>
             <div class="w-full px-4 lg:px-16 mt-4">
-              <h5 class="text-xl font-semibold">
+              <h5 class="text-xl lg:text-2xl font-semibold">
                 You’ll receive a mini sample box containing our collection of artisan salts
                 Inside your box:
               </h5>
