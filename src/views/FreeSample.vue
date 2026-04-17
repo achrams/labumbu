@@ -4,146 +4,214 @@
     <SampleNotification v-if="showSampleNotification" />
 
     <!-- HERO -->
-    <div class="w-full lg:min-h-screen flex flex-col items-center justify-center relative">
-      <div class="h-screen w-full absolute top-0 bg-black/20 z-20"></div>
-      <!-- SPLIDE -->
-      <div class="w-full h-screen">
-        <Splide :options="opt" aria-label="Artisan Salts Sampling Headers">
-          <SplideSlide v-for="(img, index) in headerImages" :key="img.alt">
+    <div class="w-full min-h-screen">
+      <div class="w-full lg:min-h-screen flex flex-col items-center justify-center relative">
+        <div class="h-screen w-full absolute top-0 bg-black/20 z-20"></div>
+        <!-- SPLIDE -->
+        <div class="w-full h-screen">
+          <Splide :options="opt" aria-label="Artisan Salts Sampling Headers">
+            <SplideSlide v-for="(img, index) in headerImages" :key="img.alt">
 
-            <!-- ✅ RESPONSIVE IMAGE -->
-            <picture>
-              <!-- Mobile -->
-              <source :srcset="img.mobile" media="(max-width: 768px)" />
+              <!-- ✅ RESPONSIVE IMAGE -->
+              <picture>
+                <!-- Mobile -->
+                <source :srcset="img.mobile" media="(max-width: 768px)" />
 
-              <!-- Desktop -->
-              <img :src="img.desktop" :alt="img.alt" class="w-full h-screen object-cover"
-                :loading="index === 0 ? 'eager' : 'lazy'" :fetchpriority="index === 0 ? 'high' : 'auto'" />
-            </picture>
+                <!-- Desktop -->
+                <img :src="img.desktop" :alt="img.alt" class="w-full h-screen object-cover"
+                  :loading="index === 0 ? 'eager' : 'lazy'" :fetchpriority="index === 0 ? 'high' : 'auto'" />
+              </picture>
 
-          </SplideSlide>
-        </Splide>
-      </div>
+            </SplideSlide>
+          </Splide>
+        </div>
 
-      <!-- OVERLAY -->
-      <div
-        class="w-full z-20 p-8 lg:pt-4 lg:px-24 h-screen absolute top-0 flex flex-col justify-center pointer-events-none">
-
+        <!-- OVERLAY -->
         <div
-          class="w-full lg:w-3/7 flex flex-col justify-between items-center lg:items-start gap-10 pointer-events-auto">
+          class="w-full z-20 p-8 lg:pt-4 lg:px-24 h-screen absolute top-0 flex flex-col justify-center pointer-events-none">
 
-          <p class="font-extrabold text-white text-4xl lg:text-5xl text-start md:text-center lg:text-start">
-            Discover Hidden Treasures from Indonesia’s Nature, Brought Into Your Daily Cooking Through Salt
-          </p>
+          <div
+            class="w-full lg:w-3/7 flex flex-col justify-between items-center lg:items-start gap-10 pointer-events-auto">
 
-          <a href="#sample-here"
-            class="flex flex-col lg:flex-row items-center gap-2 text-white font-semibold text-4xl z-20 w-fit cursor-pointer py-2"
-            v-smooth-scroll>
+            <p
+              class="font-extrabold text-white text-4xl lg:text-5xl text-start md:text-center lg:text-start pointer-events-none">
+              Discover Hidden Treasures from Indonesia’s Nature, Brought Into Your Daily Cooking Through Salt
+            </p>
 
-            <h1>Get Free Sample</h1>
+            <a href="#sample-here"
+              class="flex flex-col lg:flex-row items-center gap-2 text-white font-semibold text-4xl z-20 w-fit cursor-pointer py-2"
+              v-smooth-scroll>
 
-            <img src="../assets/icon/chevron-down-white.png"
-              class="mt-2 w-7 animate-bounce-natural duration-1000 ease-in-out" alt="scroll down" loading="lazy" />
+              <h1>Get Free Sample</h1>
 
-          </a>
+              <img src="../assets/icon/chevron-down-white.png"
+                class="mt-2 w-7 animate-bounce-natural duration-1000 ease-in-out" alt="scroll down" loading="lazy" />
+
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="w-full min-h-screen flex flex-wrap lg:flex-nowrap relative py-8 px-8 lg:px-24 gap-2">
-      <div class="w-full lg:w-1/2 lg:min-h-screen bg-gray-200">
-        <div class="w-full py-4 flex flex-col lg:flex-row gap-2 justify-center items-center lg:items-start">
-          <h4 class="font-semibold lg:font-extrabold text-3xl lg:text-3xl text-center">What’s in Your Free Sample?
-          </h4>
-          <img class="w-8 h-auto mt-1" src="../assets/icon/chevron-down-green.png" alt="arrow down">
-        </div>
-        <div class="w-full flex justify-center">
-          <img class="w-3/4" src="../assets/sampling/labumbu-artisan-salt-sample.png" alt="labumbu artisan salt sample">
-        </div>
-        <div class="w-full py-4">
-          <h5 class="text-lg text-center px-2">You’ll receive a mini sample box containing our collection of artisan
-            salts ✨
-          </h5>
-          <div class="px-4 lg:px-8 pb-8 flex flex-col items-center">
-            <h6 class="py-2">Inside your box:</h6>
-            <div class="w-full flex justify-center">
-              <div class="w-1/2 flex justify-start lg:justify-center">
-                <ul class="list-disc list-inside text-sm lg:text-md">
-                  <li>Tejakula Salt</li>
-                  <li>Kusamba Salt</li>
-                  <li>Amed Salt</li>
-                </ul>
+    <div class="w-full min-h-screen">
+
+      <div class="w-full h-max lg:min-h-screen flex flex-wrap lg:flex-nowrap relative">
+        <div class="w-full lg:w-1/2 lg:min-h-screen py-8">
+          <div class="w-full p-4 lg:py-8 lg:px-16">
+            <h4 class="font-extrabold text-3xl lg:text-5xl text-[#AA2123]">What’s in Your Free Sample?
+            </h4>
+          </div>
+          <div class="w-full flex flex-col items-center justify-center">
+            <div class="w-full lg:w-10/12 p-4 lg:p-0">
+              <div class="w-full flex justify-center gap-10">
+                <div class="w-3/4 lg:h-[330px] flex items-center">
+                  <img class="w-full object-cover scale-130" src="../assets/sampling/labumbu-artisan-salt-sample.png"
+                    alt="labumbu artisan salt sample">
+                </div>
+                <div class="w-1/4 h-[240px] lg:h-[330px]">
+                  <div class="w-full h-1/2">
+                    <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
+                      :class="selectedSalt == 'nipah' ? 'scale-150' : ''"
+                      src="../assets/sampling/labumbu-sachet-garam-nipah.png" alt="labumbu sachet garam nipah">
+                  </div>
+                  <div class="w-full h-1/2">
+                    <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
+                      :class="selectedSalt == 'bledug' ? 'scale-150' : ''"
+                      src="../assets/sampling/labumbu-sachet-garam-bledug-kuwu.png"
+                      alt="labumbu sachet garam bledug kuwu">
+                  </div>
+                </div>
               </div>
-              <div class="w-1/2 flex justify-start lg:justify-center">
-                <ul class="list-disc list-inside text-sm lg:text-md">
-                  <li>Krayan Salt</li>
-                  <li>Bledug Kuwu Salt</li>
-                  <li>Nipah Salt</li>
-                </ul>
+              <div class="w-full flex justify-center">
+                <div class="w-full h-[120px] lg:h-[165px] flex justify-center gap-4">
+                  <div class="h-full w-1/4">
+                    <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
+                      :class="selectedSalt == 'tejakula' ? 'scale-150' : ''"
+                      src="../assets/sampling/labumbu-sachet-garam-tejakula.png" alt="labumbu sachet garam tejakula">
+                  </div>
+                  <div class="h-full w-1/4">
+                    <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
+                      :class="selectedSalt == 'kusamba' ? 'scale-150' : ''"
+                      src="../assets/sampling/labumbu-sachet-garam-kusamba.png" alt="labumbu sachet kusamba">
+                  </div>
+                  <div class="h-full w-1/4">
+                    <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
+                      :class="selectedSalt == 'amed' ? 'scale-150' : ''"
+                      src="../assets/sampling/labumbu-sachet-garam-amed.png" alt="labumbu sachet amed">
+                  </div>
+                  <div class="h-full w-1/4">
+                    <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
+                      :class="selectedSalt == 'krayan' ? 'scale-150' : ''"
+                      src="../assets/sampling/labumbu-sachet-garam-krayan.png" alt="labumbu sachet krayan">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full px-4 lg:px-16 mt-4">
+              <h5 class="text-xl font-semibold">
+                You’ll receive a mini sample box containing our collection of artisan salts
+                Inside your box:
+              </h5>
+              <div class="w-full flex gap-2 flex-wrap my-4 text-xl">
+                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
+                  :class="selectedSalt == 'tejakula' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('tejakula')">Tejakula
+                  Salt</div>
+                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
+                  :class="selectedSalt == 'kusamba' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('kusamba')">Kusamba
+                  Salt</div>
+                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
+                  :class="selectedSalt == 'amed' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('amed')">Amed
+                  Salt</div>
+                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
+                  :class="selectedSalt == 'krayan' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('krayan')">Krayan
+                  Salt</div>
+                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
+                  :class="selectedSalt == 'bledug' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('bledug')">Bledug
+                  Kuwu Salt</div>
+                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
+                  :class="selectedSalt == 'nipah' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('nipah')">Nipah
+                  Salt</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="w-full lg:w-1/2 lg:min-h-screen bg-gray-100 flex flex-col gap-0 lg:gap-40 items-center">
-        <div class="w-full py-4 flex flex-col lg:flex-row gap-2 justify-center items-center lg:items-start">
-          <h4 class="font-semibold lg:font-extrabold text-3xl lg:text-3xl text-center">How to Claim Your Free Sample
-          </h4>
-          <img class="w-8 h-auto mt-1" src="../assets/icon/chevron-down-green.png" alt="arrow down">
-        </div>
-        <div class="w-full flex flex-col items-center text-center">
-          <div class="py-6 px-4">
-            <h5 class="text-lg">Don’t miss out while it’s still available! ✨</h5>
+        <div
+          class="pt-8 pb-20 lg:pb-0 w-full lg:w-1/2 lg:min-h-screen bg-[#FDF7F0] flex flex-col gap-0 lg:gap-40 items-center">
+          <div class="w-full p-4 lg:py-8 lg:px-16">
+            <h4 class="font-extrabold text-3xl lg:text-5xl">How to Claim Your Free Sample?
+            </h4>
+            <div class="my-4">
+              <h5 class="font-bold text-3xl lg:text-4xl text-[#AA2123]">4 easy steps:</h5>
+            </div>
+            <div class="mt-8 mb-12">
+              <h6 class="text-xl text-gray-500 font-semibold">
+                Don’t miss out while it’s still available! ✨
+              </h6>
+            </div>
+            <div class="w-full flex flex-col gap-0 lg:gap-4" v-for="step in claimStep">
+              <div class="w-full flex items-start gap-4">
+                <div
+                  class="w-8 h-8 p-4 lg:w-12 lg:h-12 flex items-center justify-center font-bold text-sm lg:text-lg text-[#aa2123] rounded-full border-2 bg-[#AA2123]/10 border-[#AA2123]">
+                  {{ step.id }}</div>
+                <div class="flex flex-col items-start justify-start">
+                  <div class="text-lg font-bold">
+                    {{ step.title }}
+                    <span class="whitespace-nowrap">
+                      <img class="inline h-5 align-middle mb-1" src="../assets/icon/checklist-green.png"
+                        alt="checklist">
+                    </span>
+                  </div>
+                  <div class="text-sm text-gray-500 font-semibold">
+                    {{ step.text }}
+                  </div>
+                </div>
+              </div>
+              <div v-if="step.id !== 4" class="w-8 lg:w-12 h-12 flex items-center justify-center">
+                <div class="w- h-8 border-r-1 border-l-1 border-[#AA2123]"></div>
+              </div>
+            </div>
           </div>
-          <ul class="list-decimal lg:list-inside px-8 pb-8 text-start lg:text-center">
-            <li v-for="step in claimStep" :key="step.id" class="mb-5">
-              <span>
-                <span class="text-lg font-semibold">
-                  {{ step.title }}
-                  <img class="inline h-5 align-middle ml-1" src="../assets/icon/checklist-green.png">
-                </span>
-                <br>
-                <span class="text-md">{{ step.text }}</span>
-              </span>
-            </li>
-          </ul>
+
         </div>
       </div>
     </div>
     <!-- SECTION 2 -->
-    <div class="w-full min-h-screen relative">
-      <div class="w-full h-[120vh] md:h-[70vh] lg:h-[120vh] flex flex-col items-center">
-        <!-- ✅ bisa juga dijadiin picture kalau mau -->
-        <img class="w-full object-cover object-[60%_50%] lg:object-right absolute z-10 h-[120vh] md:h-auto lg:h-auto"
-          src="../assets/sampling/petani-tejakula.webp" alt="petani garam tejakula bali" loading="lazy" />
+    <div class="w-full min-h-screen">
+      <div class="w-full min-h-screen relative">
+        <div class="w-full h-[120vh] md:h-[70vh] lg:h-[120vh] flex flex-col items-center">
+          <!-- ✅ bisa juga dijadiin picture kalau mau -->
+          <img class="w-full object-cover object-[60%_50%] lg:object-right absolute z-10 h-[120vh] md:h-auto lg:h-auto"
+            src="../assets/sampling/petani-tejakula.webp" alt="petani garam tejakula bali" loading="lazy" />
 
-        <div class="w-full h-24 z-40 absolute top-0 -mt-20" id="sample-here"></div>
+          <div class="w-full h-24 z-40 absolute top-0 -mt-20" id="sample-here"></div>
 
-        <div class="w-full z-20 p-8 lg:p-24 lg:mb-40">
-          <div class="w-full lg:w-2/5 bg-white px-8 pt-12 pb-10 mt-7 flex flex-col gap-6">
+          <div class="w-full z-20 p-8 lg:p-24 lg:mb-40">
+            <div class="w-full lg:w-1/3 bg-white px-8 pt-12 pb-10 mt-7 flex flex-col gap-6">
 
-            <h3 class="text-4xl lg:text-5xl font-extrabold">
-              Try Nature’s <br> Truest Flavor.
-            </h3>
+              <h3 class="text-4xl lg:text-5xl font-extrabold">
+                Try Nature’s <br> Truest Flavor.
+              </h3>
 
-            <p>
-              Experience the purity of natural salt with carefully sourced artisan salt from Indonesia. For each free
-              sample, discover how real purity brings out the true flavor of your cooking, without impurities getting in
-              the way.
-            </p>
+              <p>
+                Experience the purity of natural salt with carefully sourced artisan salt from Indonesia. For each free
+                sample, discover how real purity brings out the true flavor of your cooking, without impurities getting
+                in
+                the way.
+              </p>
 
-            <div class="w-full flex justify-center">
-              <button
-                class="w-max px-12 py-2 bg-black rounded-4xl text-lg text-white shadow-sm shadow-black cursor-pointer"
-                @click="toggleModal">
-                Claim Yours
-              </button>
+              <div class="w-full flex justify-center">
+                <button
+                  class="w-max px-12 py-2 bg-black rounded-4xl text-lg text-white shadow-sm shadow-black cursor-pointer"
+                  @click="toggleModal">
+                  Claim Yours
+                </button>
+              </div>
+
             </div>
-
           </div>
         </div>
       </div>
     </div>
-    <div class="mt-0 lg:mt-12">
+    <div class="mt-0 lg:mt-[6vw] 3xl:mt-[4vw]">
       <Footer />
     </div>
   </div>
@@ -152,7 +220,7 @@
 <script setup>
 import { useDataStore } from '@/stores'
 import { useHead } from '@vueuse/head'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
 import Footer from '@/components/Footer.vue'
 import FormInput from '@/components/FormInput.vue'
@@ -170,8 +238,12 @@ import fourth from '../assets/sampling/labumbu-garam-bledug-kuwu.webp'
 import fourthMobile from '../assets/sampling/labumbu-garam-bledug-kuwu-mobile.webp'
 import fifth from '../assets/sampling/labumbu-artisan-salt.webp'
 import fifthMobile from '../assets/sampling/fifth_alt.webp'
-
+const selectedSalt = ref('')
 const store = useDataStore()
+
+const chooseSalt = (val) => {
+  selectedSalt.value = val
+}
 
 // ✅ SEO + preload hero image
 useHead({
@@ -209,7 +281,7 @@ const claimStep = [
   {
     id: 2,
     title: 'Fill in your details',
-    text: 'Complete the short form so we know where to send it.'
+    text: 'Complete the short form so we know who to send it.'
   },
   {
     id: 3,
@@ -239,7 +311,9 @@ const opt = {
   arrows: true,
   autoplay: true,
   interval: 5000,
-  speed: 1500
+  speed: 1500,
+  drag: 'free',
+  snap: true
 }
 </script>
 

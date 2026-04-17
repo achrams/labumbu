@@ -11,7 +11,7 @@
         <!-- NAV DESKTOP -->
         <nav class="hidden md:flex gap-2 text-sm lg:text-base nav-font" :class="navTextColor">
 
-          <RouterLink v-if="showOurBrand" to="/" :class="navItemClass">
+          <RouterLink to="/" :class="navItemClass">
             Our Brand
           </RouterLink>
 
@@ -19,9 +19,13 @@
             Artisan Salt
           </RouterLink>
 
-          <RouterLink v-if="!isHampers" to="/hampers" :class="[navItemClass, isHampers && activeClass]">
-            Hampers
+          <RouterLink v-if="!isSample" to="/sample" :class="[navItemClass, isSample && activeClass]">
+            Sampling
           </RouterLink>
+
+          <!-- <RouterLink v-if="!isHampers" to="/hampers" :class="[navItemClass, isHampers && activeClass]">
+            Hampers
+          </RouterLink> -->
 
         </nav>
 
@@ -48,9 +52,13 @@
           Artisan Salt
         </RouterLink>
 
-        <RouterLink v-if="!isHampers" @click="closeSidebar" to="/hampers" :class="mobileItemClass">
-          Hampers
+        <RouterLink v-if="!isSample" @click="closeSidebar" to="/sample" :class="mobileItemClass">
+          Sampling
         </RouterLink>
+
+        <!-- <RouterLink v-if="!isHampers" @click="closeSidebar" to="/hampers" :class="mobileItemClass">
+          Hampers
+        </RouterLink> -->
 
       </div>
     </div>

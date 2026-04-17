@@ -1,10 +1,14 @@
 <template>
   <div class="w-full px-4 p-8 z-50">
-    <div class="w-full mt-8 mb-8 text-justify md:text-center leading-relaxed p-0 font-md md:p-4">
-      Rempah dan bumbu premium Indonesia yang dipersembahkan oleh PT Ladara. Kami menghadirkan cita rasa autentik
-      dari rempah-rempah pilihan, herbal, serta bahan alami terbaik yang bersumber langsung dari Indonesia. Dengan
-      komitmen pada kualitas, keberlanjutan, dan inovasi, Labumbu siap memperkaya pengalaman memasak Anda dengan
-      racikan bumbu yang terinspirasi dari kekayaan kuliner nusantara.
+    <div class="w-full mt-8 mb-2 text-justify md:text-center leading-relaxed p-0 font-md md:p-4">
+      <div class="text-lg">
+        La Bumbu by PT Aluna Daya Ciptarasa brings you premium natural salts directly sourced from the rich landscapes
+        of
+        Indonesia.
+      </div>
+      <div class="text-lg">
+        With a commitment to quality, sustainability, and purity, we work directly with local farmers and
+        preserve traditional methods passed down through generations.</div>
     </div>
     <div class="p-4 hidden md:block"><img class="w-full" src="../assets/icon/longrect.png" alt="garis_panjang"></div>
     <div class="w-full flex flex-wrap px-0 lg:px-8">
