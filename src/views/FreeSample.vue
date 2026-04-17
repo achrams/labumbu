@@ -41,19 +41,15 @@
             <a href="#sample-here"
               class="flex flex-col lg:flex-row items-center gap-2 text-white font-semibold text-4xl z-20 w-fit cursor-pointer py-2"
               v-smooth-scroll>
-
               <h1>Get Free Sample</h1>
-
               <img src="../assets/icon/chevron-down-white.png"
                 class="mt-2 w-7 animate-bounce-natural duration-1000 ease-in-out" alt="scroll down" loading="lazy" />
-
             </a>
           </div>
         </div>
       </div>
     </div>
     <div class="w-full min-h-screen">
-
       <div class="w-full h-max lg:min-h-screen flex flex-wrap lg:flex-nowrap relative">
         <div class="w-full lg:w-1/2 lg:min-h-screen py-8">
           <div class="w-full p-4 lg:py-8 lg:px-16">
@@ -106,12 +102,12 @@
                 </div>
               </div>
             </div>
-            <div class="w-full px-4 lg:px-16 mt-4">
+            <div class="w-full px-4 lg:px-16 mt-6">
               <h5 class="text-xl lg:text-2xl font-semibold">
                 You’ll receive a mini sample box containing our collection of artisan salts
                 Inside your box:
               </h5>
-              <div class="w-full flex gap-2 flex-wrap my-4 text-xl">
+              <div class="w-full flex gap-2 flex-wrap my-4 text-2xl">
                 <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
                   :class="selectedSalt == 'tejakula' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('tejakula')">Tejakula
                   Salt</div>
