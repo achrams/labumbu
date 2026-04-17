@@ -107,7 +107,7 @@
                 You’ll receive a mini sample box containing our collection of artisan salts
                 Inside your box:
               </h5>
-              <div class="w-full flex gap-2 flex-wrap my-4 text-2xl">
+              <div class="w-full flex gap-2 flex-wrap my-4 text-xl">
                 <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
                   :class="selectedSalt == 'tejakula' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('tejakula')">Tejakula
                   Salt</div>
@@ -165,6 +165,23 @@
                 <div class="w- h-8 border-r-1 border-l-1 border-[#AA2123]"></div>
               </div>
             </div>
+            <div class="w-full flex gap-2 mt-18">
+              <div
+                class="w-1/3 min-h-32 bg-white rounded-3xl flex flex-col items-center justify-center border-1 border-gray-300">
+                <h6 class="font-bold text-3xl">6</h6>
+                <h6 class="text-gray-400 font-semibold">Salt Varieties</h6>
+              </div>
+              <div
+                class="w-1/3 min-h-32 bg-white rounded-3xl flex flex-col items-center justify-center border-1 border-gray-300">
+                <h6 class="font-bold text-3xl">100%</h6>
+                <h6 class="text-gray-400 font-semibold">Artisan Made</h6>
+              </div>
+              <div
+                class="w-1/3 min-h-32 bg-white rounded-3xl flex flex-col items-center justify-center border-1 border-gray-300">
+                <h6 class="font-bold text-3xl">Free</h6>
+                <h6 class="text-gray-400 font-semibold">No Cost</h6>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -181,7 +198,7 @@
           <div class="w-full h-24 z-40 absolute top-0 -mt-20" id="sample-here"></div>
 
           <div class="w-full z-20 p-8 lg:p-24 lg:mb-40">
-            <div class="w-full lg:w-[26vw] bg-white px-8 pt-12 pb-10 mt-7 flex flex-col gap-6">
+            <div class="w-full lg:w-[26vw] min-h-96 bg-white px-8 pt-12 pb-10 mt-7 flex flex-col gap-6">
 
               <h3 class="text-4xl lg:text-5xl font-extrabold">
                 Try Nature’s <br> Truest Flavor.
