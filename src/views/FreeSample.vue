@@ -38,13 +38,13 @@
               Discover Hidden Treasures from Indonesia’s Nature, Brought Into Your Daily Cooking Through Salt
             </p>
 
-            <a href="#sample-here"
+            <button
               class="flex flex-col lg:flex-row items-center gap-2 text-white font-semibold text-4xl z-20 w-fit cursor-pointer py-2"
-              v-smooth-scroll>
+              v-smooth-scroll @click.prevent="toClaimSection('sample-here')">
               <h1>Get Free Sample</h1>
               <img src="../assets/icon/chevron-down-white.png"
                 class="mt-2 w-7 animate-bounce-natural duration-1000 ease-in-out" alt="scroll down" loading="lazy" />
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -66,12 +66,12 @@
                 <div class="w-1/4 h-[240px] lg:h-[330px]">
                   <div class="w-full h-1/2">
                     <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
-                      :class="selectedSalt == 'nipah' ? 'scale-150' : ''"
+                      :class="selectedSalt.title == 'Nipah Salt' ? 'scale-150' : ''"
                       src="../assets/sampling/labumbu-sachet-garam-nipah.png" alt="labumbu sachet garam nipah">
                   </div>
                   <div class="w-full h-1/2">
                     <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
-                      :class="selectedSalt == 'bledug' ? 'scale-150' : ''"
+                      :class="selectedSalt.title == 'Bledug Kuwu Salt' ? 'scale-150' : ''"
                       src="../assets/sampling/labumbu-sachet-garam-bledug-kuwu.png"
                       alt="labumbu sachet garam bledug kuwu">
                   </div>
@@ -81,22 +81,22 @@
                 <div class="w-full h-[120px] lg:h-[165px] flex justify-center gap-4">
                   <div class="h-full w-1/4">
                     <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
-                      :class="selectedSalt == 'tejakula' ? 'scale-150' : ''"
+                      :class="selectedSalt.title == 'Tejakula Salt' ? 'scale-150' : ''"
                       src="../assets/sampling/labumbu-sachet-garam-tejakula.png" alt="labumbu sachet garam tejakula">
                   </div>
                   <div class="h-full w-1/4">
                     <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
-                      :class="selectedSalt == 'kusamba' ? 'scale-150' : ''"
+                      :class="selectedSalt.title == 'Kusamba Salt' ? 'scale-150' : ''"
                       src="../assets/sampling/labumbu-sachet-garam-kusamba.png" alt="labumbu sachet kusamba">
                   </div>
                   <div class="h-full w-1/4">
                     <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
-                      :class="selectedSalt == 'amed' ? 'scale-150' : ''"
+                      :class="selectedSalt.title == 'Amed Salt' ? 'scale-150' : ''"
                       src="../assets/sampling/labumbu-sachet-garam-amed.png" alt="labumbu sachet amed">
                   </div>
                   <div class="h-full w-1/4">
                     <img class="h-full w-auto object-cover scale-130 duration-150 delay-75"
-                      :class="selectedSalt == 'krayan' ? 'scale-150' : ''"
+                      :class="selectedSalt.title == 'Krayan Salt' ? 'scale-150' : ''"
                       src="../assets/sampling/labumbu-sachet-garam-krayan.png" alt="labumbu sachet krayan">
                   </div>
                 </div>
@@ -105,7 +105,7 @@
             <div class="w-full block lg:hidden">
               <Splide :options="mobileOpt" aria-label="Artisan Salts Sampling List" ref="splideRef">
                 <SplideSlide v-for="sachet in productSlide" :key="sachet.alt">
-                  <div class="w-full h-96"
+                  <div class="w-full h-96 flex items-center justify-center"
                     :class="selectedSalt.id == sachet.id ? 'border-5 rounded-3xl border-blue-400' : ''">
                     <img class="h-full w-auto object-cover scale-130 duration-150 delay-75" :src="sachet.img"
                       :alt="sachet.alt">
@@ -185,9 +185,9 @@
       </div>
     </div>
     <!-- SECTION 2 -->
-    <div class="w-full min-h-screen">
-      <div class="w-full min-h-screen relative">
-        <div class="w-full h-[120vh] md:h-[70vh] lg:h-[120vh] flex flex-col items-center">
+    <div class="w-full min-h-screen md:min-h-max lg:h-fit">
+      <div class="w-full min-h-screen md:min-h-max relative">
+        <div class="w-full h-[120vh] md:h-max 2xl:h-[110vh] flex flex-col items-center">
           <!-- ✅ bisa juga dijadiin picture kalau mau -->
           <img class="w-full object-cover object-[60%_50%] lg:object-right absolute z-10 h-[120vh] md:h-auto lg:h-auto"
             src="../assets/sampling/petani-tejakula.webp" alt="petani garam tejakula bali" loading="lazy" />
@@ -248,7 +248,7 @@ import fourth from '../assets/sampling/labumbu-garam-bledug-kuwu.webp'
 import fourthMobile from '../assets/sampling/labumbu-garam-bledug-kuwu-mobile.webp'
 import fifth from '../assets/sampling/labumbu-artisan-salt.webp'
 import fifthMobile from '../assets/sampling/fifth_alt.webp'
-const selectedSalt = ref({})
+const selectedSalt = ref({ id: 1, alt: 'labumbu sachet garam tejakula', img: tejakulaSachet, title: 'Tejakula Salt' })
 const store = useDataStore()
 const splideRef = ref(null)
 
@@ -257,6 +257,12 @@ const chooseSalt = (val) => {
   splideRef.value.splide.go(val)
 }
 
+const toClaimSection = (id) => {
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 
 onMounted(() => {
   selectedSalt.value = productSlide[0]
