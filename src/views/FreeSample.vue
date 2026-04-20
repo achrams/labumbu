@@ -248,7 +248,7 @@ import fourth from '../assets/sampling/labumbu-garam-bledug-kuwu.webp'
 import fourthMobile from '../assets/sampling/labumbu-garam-bledug-kuwu-mobile.webp'
 import fifth from '../assets/sampling/labumbu-artisan-salt.webp'
 import fifthMobile from '../assets/sampling/fifth_alt.webp'
-const selectedSalt = ref({ id: 1, alt: 'labumbu sachet garam tejakula', img: tejakulaSachet, title: 'Tejakula Salt' })
+const selectedSalt = ref({ id: 0, alt: '', img: tejakulaSachet, title: '' })
 const store = useDataStore()
 const splideRef = ref(null)
 
