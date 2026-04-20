@@ -18,8 +18,8 @@
                 <source :srcset="img.mobile" media="(max-width: 768px)" />
 
                 <!-- Desktop -->
-                <img :src="img.desktop" :alt="img.alt" class="w-full h-screen object-cover"
-                  :loading="index === 0 ? 'eager' : 'lazy'" :fetchpriority="index === 0 ? 'high' : 'auto'" />
+                <img :src="img.desktop" :alt="img.alt" class="w-full h-screen object-cover" loading="eager"
+                  fetchpriority="high" />
               </picture>
 
             </SplideSlide>
@@ -57,7 +57,7 @@
             </h4>
           </div>
           <div class="w-full flex flex-col items-center justify-center">
-            <div class="w-full lg:w-10/12 p-4 lg:p-0">
+            <div class="hidden lg:block w-full lg:w-10/12 p-4 lg:p-0">
               <div class="w-full flex justify-center gap-10">
                 <div class="w-3/4 lg:h-[330px] flex items-center">
                   <img class="w-full object-cover scale-130" src="../assets/sampling/labumbu-artisan-salt-sample.png"
@@ -102,6 +102,17 @@
                 </div>
               </div>
             </div>
+            <div class="w-full block lg:hidden">
+              <Splide :options="mobileOpt" aria-label="Artisan Salts Sampling List" ref="splideRef">
+                <SplideSlide v-for="sachet in productSlide" :key="sachet.alt">
+                  <div class="w-full h-96"
+                    :class="selectedSalt.id == sachet.id ? 'border-5 rounded-3xl border-blue-400' : ''">
+                    <img class="h-full w-auto object-cover scale-130 duration-150 delay-75" :src="sachet.img"
+                      :alt="sachet.alt">
+                  </div>
+                </SplideSlide>
+              </Splide>
+            </div>
             <div class="w-full px-4 lg:px-16 mt-6">
               <h5 class="text-xl lg:text-2xl font-semibold">
                 You’ll receive a mini sample box containing our collection of artisan salts
@@ -109,23 +120,9 @@
               </h5>
               <div class="w-full flex gap-2 flex-wrap my-4 text-xl">
                 <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
-                  :class="selectedSalt == 'tejakula' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('tejakula')">Tejakula
-                  Salt</div>
-                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
-                  :class="selectedSalt == 'kusamba' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('kusamba')">Kusamba
-                  Salt</div>
-                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
-                  :class="selectedSalt == 'amed' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('amed')">Amed
-                  Salt</div>
-                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
-                  :class="selectedSalt == 'krayan' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('krayan')">Krayan
-                  Salt</div>
-                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
-                  :class="selectedSalt == 'bledug' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('bledug')">Bledug
-                  Kuwu Salt</div>
-                <div class="px-4 py-2 rounded-3xl border-[#AA2123] text-[#AA2123] border-2 my-2 cursor-pointer"
-                  :class="selectedSalt == 'nipah' ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt('nipah')">Nipah
-                  Salt</div>
+                  v-for="(sachet, index) in productSlide" :key="sachet.alt"
+                  :class="selectedSalt.title == sachet.title ? 'bg-[#AA2123]/30' : ''" @click="chooseSalt(index)">{{
+                    sachet.title }}</div>
               </div>
             </div>
           </div>
@@ -233,7 +230,7 @@
 <script setup>
 import { useDataStore } from '@/stores'
 import { useHead } from '@vueuse/head'
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 
 import Footer from '@/components/Footer.vue'
 import FormInput from '@/components/FormInput.vue'
@@ -251,12 +248,23 @@ import fourth from '../assets/sampling/labumbu-garam-bledug-kuwu.webp'
 import fourthMobile from '../assets/sampling/labumbu-garam-bledug-kuwu-mobile.webp'
 import fifth from '../assets/sampling/labumbu-artisan-salt.webp'
 import fifthMobile from '../assets/sampling/fifth_alt.webp'
-const selectedSalt = ref('')
+const selectedSalt = ref({})
 const store = useDataStore()
+const splideRef = ref(null)
 
 const chooseSalt = (val) => {
-  selectedSalt.value = val
+  selectedSalt.value = productSlide[val]
+  splideRef.value.splide.go(val)
 }
+
+
+onMounted(() => {
+  selectedSalt.value = productSlide[0]
+  const splide = splideRef.value.splide
+  splide.on('moved', (newIndex) => {
+    chooseSalt(newIndex)
+  })
+})
 
 // ✅ SEO + preload hero image
 useHead({
@@ -283,6 +291,23 @@ const headerImages = [
   { desktop: second, mobile: secondMobile, alt: 'garam nipah alami indonesia' },
   { desktop: third, mobile: thirdMobile, alt: 'garam bali tradisional' },
   { desktop: fourth, mobile: fourthMobile, alt: 'garam bledug kuwu jawa tengah' },
+]
+
+import nipahSachet from "../assets/sampling/labumbu-sachet-garam-nipah.png"
+import kuwuSachet from "../assets/sampling/labumbu-sachet-garam-bledug-kuwu.png"
+import tejakulaSachet from "../assets/sampling/labumbu-sachet-garam-tejakula.png"
+import krayanSachet from "../assets/sampling/labumbu-sachet-garam-krayan.png"
+import amedSachet from "../assets/sampling/labumbu-sachet-garam-amed.png"
+import kusambaSachet from "../assets/sampling/labumbu-sachet-garam-kusamba.png"
+
+
+const productSlide = [
+  { id: 1, alt: 'labumbu sachet garam tejakula', img: tejakulaSachet, title: 'Tejakula Salt' },
+  { id: 2, alt: 'labumbu sachet garam kusamba', img: kusambaSachet, title: 'Kusamba Salt' },
+  { id: 3, alt: 'labumbu sachet garam amed', img: amedSachet, title: 'Amed Salt' },
+  { id: 4, alt: 'labumbu sachet garam nipah', img: nipahSachet, title: 'Nipah Salt' },
+  { id: 5, alt: 'labumbu sachet garam krayan', img: krayanSachet, title: 'Krayan Salt' },
+  { id: 6, alt: 'labumbu sachet garam bledug kuwu', img: kuwuSachet, title: 'Bledug Kuwu Salt' },
 ]
 
 const claimStep = [
@@ -327,6 +352,16 @@ const opt = {
   speed: 1500,
   drag: 'free',
   snap: true
+}
+
+const mobileOpt = {
+  pagination: false,
+  rewind: true,
+  type: 'loop',
+  padding: '4rem',
+  autoplay: true,
+  interval: 5000,
+  speed: 1500,
 }
 </script>
 

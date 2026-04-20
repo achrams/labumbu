@@ -4,10 +4,7 @@
       <div class="text-lg">
         La Bumbu by PT Aluna Daya Ciptarasa brings you premium natural salts directly sourced from the rich landscapes
         of
-        Indonesia.
-      </div>
-      <div class="text-lg">
-        With a commitment to quality, sustainability, and purity, we work directly with local farmers and
+        Indonesia. With a commitment to quality, sustainability, and purity, we work directly with local farmers and
         preserve traditional methods passed down through generations.</div>
     </div>
     <div class="p-4 hidden md:block"><img class="w-full" src="../assets/icon/longrect.png" alt="garis_panjang"></div>
