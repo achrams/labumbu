@@ -343,6 +343,7 @@ const showSampleModal = computed(() => store.showSampleModal)
 const showSampleNotification = computed(() => store.showSampleNotification)
 
 const toggleModal = () => {
+  fbq('track', 'InitiateCheckout')
   store.toggleSampleModal()
 }
 

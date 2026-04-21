@@ -126,7 +126,7 @@ const submitForm = async () => {
         subbed.value = false
         agreed.value = false
         loadingSubmit.value = false
-        fbq('init', 'Lead')
+        fbq('track', 'Lead')
         toggleModal()
         toggleNotif(
           true,
