@@ -221,7 +221,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-0 lg:mt-[6vw] 3xl:mt-[4vw]">
+    <div class="mt-0 lg:mt-[7vw] 3xl:mt-[4vw]">
       <Footer />
     </div>
   </div>
